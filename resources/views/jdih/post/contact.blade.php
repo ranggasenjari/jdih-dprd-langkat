@@ -34,7 +34,7 @@
                 <article class="card shadow post-entry mb-4">
                     <div class="row gx-0">
                         <div class="col-xl-6">
-                            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=115.23217588663104%2C-8.669524852755153%2C115.2366551756859%2C-8.667138438806793&amp;layer=mapnik&amp;marker=-8.668331647675165%2C115.23441553115845"></iframe>
+                        <iframe width="100%" height="100%" src="https://www.openstreetmap.org/export/embed.html?bbox=98.44324529170991%2C3.739565536278573%2C98.44923198223115%2C3.7426595626235986&amp;layer=mapnik&amp;marker=3.7411125508167076%2C98.44623863697052"></iframe>
                         </div>
                         <div class="col-xl-6">
                             <div class="p-10 fs-lg" style="padding: 4.5rem">

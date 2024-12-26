@@ -2,7 +2,7 @@
 
     @if (isset($laws) AND $laws->count() > 0)
         <div class="dropdown-header">
-            Peraturan Perundang-undangan
+            Dokumen Peraturan
             @if ($laws->count() == 3)
                 <a href="{{ route('legislation.law.index', ['title' => $term]) }}" class="float-end text-body">
                     Lihat semua

@@ -6,6 +6,7 @@ use App\Enums\LegislationRelationshipType;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -31,5 +32,11 @@ class AppServiceProvider extends ServiceProvider
                 return $value->type->value == $type;
             });
         });
+
+        // Deteksi perangkat mobile
+        $isMobile = request()->header('User-Agent') && preg_match('/Mobile|Android|iPhone/i', request()->header('User-Agent'));
+
+        // Bagikan variabel ke semua view
+        View::share('isMobile', $isMobile);
     }
 }

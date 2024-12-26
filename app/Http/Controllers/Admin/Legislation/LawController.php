@@ -36,12 +36,12 @@ class LawController extends LegislationController
      */
     public function index(Request $request)
     {
-        $pageHeader = 'Peraturan Perundang-undangan';
+        $pageHeader = 'Dokumen Peraturan';
         $pageTitle = $pageHeader . $this->pageTitle;
         $breadCrumbs = [
             route('admin.dashboard') => '<i class="ph-house me-2"></i>Dasbor',
             '#' => 'Produk Hukum',
-            'Peraturan Perundang-undangan' => TRUE
+            'Dokumen Peraturan' => TRUE
         ];
 
         $laws = Legislation::ofType(1)->with(['category', 'user']);
@@ -159,12 +159,12 @@ class LawController extends LegislationController
      */
     public function create()
     {
-        $pageHeader = 'Tambah Peraturan Perundang-undangan';
+        $pageHeader = 'Tambah Dokumen Peraturan';
         $pageTitle = $pageHeader . $this->pageTitle;
         $breadCrumbs = [
             route('admin.dashboard') => '<i class="ph-house me-2"></i>Dasbor',
             '#' => 'Produk Hukum',
-            route('admin.legislation.law.index') => 'Peraturan Perundang-undangan',
+            route('admin.legislation.law.index') => 'Dokumen Peraturan',
             'Tambah' => TRUE
         ];
 
@@ -337,7 +337,7 @@ class LawController extends LegislationController
         $breadCrumbs = [
             route('admin.dashboard') => '<i class="ph-house me-2"></i>Dasbor',
             '#' => 'Produk Hukum',
-            route('admin.legislation.law.index') => 'Peraturan Perundang-undangan',
+            route('admin.legislation.law.index') => 'Dokumen Peraturan',
             'Detail' => TRUE
         ];
 
@@ -370,12 +370,12 @@ class LawController extends LegislationController
     {
         $law = $legislation;
 
-        $pageHeader = 'Ubah Peraturan Perundang-undangan';
+        $pageHeader = 'Ubah Dokumen Peraturan';
         $pageTitle = $pageHeader . $this->pageTitle;
         $breadCrumbs = [
             route('admin.dashboard') => '<i class="ph-house me-2"></i>Dasbor',
             '#' => 'Produk Hukum',
-            route('admin.legislation.law.index') => 'Peraturan Perundang-undangan',
+            route('admin.legislation.law.index') => 'Dokumen Peraturan',
             'Ubah' => TRUE
         ];
 

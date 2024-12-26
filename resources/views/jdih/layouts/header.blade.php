@@ -2,16 +2,16 @@
 <div class="page-header page-header-light">
     <div class="page-header-content container d-lg-flex">
         <div class="d-flex">
-            <a href="{{ $jdihnUrl }}" class="page-title me-3">
+            <a href="{{ $jdihnUrl }}" class="page-title me-3" style="align-self: center;">
                 <img src="{{ $jdihnLogo }}" alt="{{ $jdihnTitle }}" width="64">
             </a>
 
-            <a href="{{ $appUrl }}" class="page-title me-3">
+            <a href="{{ $appUrl }}" class="page-title me-3" style="align-self: center;">
                 <img src="{{ $appLogoUrl }}" alt="{{ $appName }}" width="64">
             </a>
 
             <h1 class="page-title mb-0">
-                <a href="beranda" class="text-dark">
+                <a href="{{ $appUrl }}" class="text-dark">
                     <span class="fw-bold">{!! $appName !!}</span>
                     <small class="d-block fs-base fs-sm text-muted">{!! $appDesc !!}</small>
                 </a>

@@ -44,9 +44,9 @@
                                     <th class="sorting @if (!empty($sort) AND Request::get('order') == 'abbrev') {{ 'sorting_' . $sort }} @endif">
                                         <a href="{{ route('admin.legislation.institute.index', ['order' => 'abbrev', 'sort' => $sortState] + Request::all()) }}" class="text-dark d-block">Singkatan</a>
                                     </th>
-                                    <th class="sorting @if (!empty($sort) AND Request::get('order') == 'name') {{ 'sorting_' . $sort }} @endif">
+                                    <!-- <th class="sorting @if (!empty($sort) AND Request::get('order') == 'name') {{ 'sorting_' . $sort }} @endif">
                                         <a href="{{ route('admin.legislation.institute.index', ['order' => 'code', 'sort' => $sortState] + Request::all()) }}" class="text-dark d-block">Kode</a>
-                                    </th>
+                                    </th> -->
                                     <th class="text-center sorting @if (!empty($sort) AND Request::get('order') == 'total') {{ 'sorting_' . $sort }} @endif">
                                         <a href="{{ route('admin.legislation.institute.index', ['order' => 'total', 'sort' => $sortState] + Request::all()) }}" class="text-dark d-block">Total</a>
                                     </th>
@@ -60,7 +60,7 @@
                                     <tr>
                                         <td><span class="fw-semibold d-block">{{ $institute->name }}</span></td>
                                         <td>{{ $institute->abbrev }}</td>
-                                        <td>{{ $institute->code }}</td>
+                                        <!-- <td>{{ $institute->code }}</td> -->
                                         <td class="text-center"><span class="badge rounded-pill bg-indigo">{{ $institute->legislations->count() }}</span></td>
 
                                         @cannot('isAuthor')
@@ -103,7 +103,7 @@
                                     @csrf
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Nama:</label>
-                                        <input id="name" type="text" class="form-control @if ($errors->get('name') OR $errors->get('slug')) is-invalid @endif" name="name" value="{{ old('name') }}" placeholder="Biro Hukum Setda Provinsi Bali">
+                                        <input id="name" type="text" class="form-control @if ($errors->get('name') OR $errors->get('slug')) is-invalid @endif" name="name" value="{{ old('name') }}" placeholder="Bagian Hukum Setda Kab. Langkat">
                                         @if ($errors->get('name') OR $errors->get('slug'))
                                             <ul class="invalid-feedback list-unstyled">
                                                 @foreach ($errors->get('name') as $error)
@@ -125,13 +125,13 @@
                                     </div>
 
 
-                                    <div class="mb-3">
+                                    <!-- <div class="mb-3">
                                         <label for="code" class="form-label">Kode:</label>
                                         <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code" value="{{ old('code') }}">
                                         @error('code')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @endif
-                                    </div>
+                                    </div> -->
 
                                     <div class="mb-3">
                                         <label for="desc" class="form-label">Deskripsi:</label>

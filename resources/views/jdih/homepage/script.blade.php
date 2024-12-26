@@ -50,7 +50,11 @@
         const memberSlider = tns({
             "container": "#member-slider",
             "loop": true,
-            "items": 3,
+            @if($isMobile)
+            "items": 2,
+            @else
+            "items": 4,
+            @endif
             "gutter": 20,
             "controls": false,
             "mouseDrag": true,

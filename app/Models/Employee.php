@@ -149,6 +149,6 @@ class Employee extends Model
 
     public function scopeSorted($query, $request = []): void
     {
-        isset($request['order']) ? $query->orderBy($request['order'], $request['sort']) : $query->orderBy('name', 'asc');
+        isset($request['order']) ? $query->orderBy($request['order'], $request['sort']) : $query->orderBy('id', 'asc');
     }
 }

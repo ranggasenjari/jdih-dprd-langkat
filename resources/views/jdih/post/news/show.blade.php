@@ -36,9 +36,9 @@
             <main class="col-xl-8">
                 <article class="card shadow-sm post-entry mb-4">
                     <div class="card-header p-4 border-bottom-0 post-title">
-                        <h2 class="d-block display-6 fw-bold mb-2">{{ $news->title }}</h2>
+                        <h2 class="d-block display-8 fw-bold mb-2">{{ $news->title }}</h2>
                         <ul class="post-meta list-inline list-inline-bullet text-muted">
-                            <li class="list-inline-item"><i class="ph-clock me-2"></i>{{ $news->timeFormatted($news->published_at, "G:i") }} WITA</li>
+                            <li class="list-inline-item"><i class="ph-clock me-2"></i>{{ $news->timeFormatted($news->published_at, "G:i") }} WIB</li>
                             <li class="list-inline-item"><i class="ph-calendar-blank me-2"></i>{{ $news->timeFormatted($news->published_at, "l, j F Y") }}</li>
                             <li class="list-inline-item"><i class="ph-user me-2"></i>{{ $news->author->name }}</li>
                         </ul>

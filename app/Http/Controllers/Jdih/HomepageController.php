@@ -47,9 +47,9 @@ class HomepageController extends JdihController
         $totalJudgments	  = Legislation::ofType(4)->published()->count();
 
         $popularLaw = Legislation::ofType(1)->popular()->first();
-        $popularLawDoc = $popularLaw->documents()
-            ->ofType('master')
-            ->first();
+        $popularLawDoc = $popularLaw
+        ? $popularLaw->documents()->ofType('master')->first()
+        : null;
 
         $adobeKey = Config::get('services.adobe.key');
 
@@ -64,9 +64,9 @@ class HomepageController extends JdihController
             ->latest()
             ->first();
 
-        $cover = $monograph->documents()
-            ->ofType('cover')
-            ->first();
+        $cover = $monograph
+        ? $monograph->documents()->ofType('cover')->first() 
+        : null;
 
         $latestNews = Post::ofType('news')->with('taxonomy', 'author', 'cover')
             ->published()

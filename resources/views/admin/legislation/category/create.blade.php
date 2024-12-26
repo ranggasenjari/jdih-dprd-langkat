@@ -32,7 +32,7 @@
                     </div>
                     <div class="mb-0">
                         <label for="desc" class="form-label">Deskripsi</label>
-                        <textarea name="desc" id="desc" class="form-control" rows="4" placeholder="Peraturan Perundang-undangan yang dibentuk oleh Dewan Perwakilan Rakyat Daerah dengan persetujuan bersama Kepala Daerah (gubernur atau bupati/wali kota)"></textarea>
+                        <textarea name="desc" id="desc" class="form-control" rows="4" placeholder="Dokumen Peraturan yang dibentuk oleh Dewan Perwakilan Rakyat Daerah dengan persetujuan bersama Kepala Daerah (gubernur atau bupati/wali kota)"></textarea>
                     </div>
                 </div>
                 <div class="modal-footer border-top-0 pt-0">

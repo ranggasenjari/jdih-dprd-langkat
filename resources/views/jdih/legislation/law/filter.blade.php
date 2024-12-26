@@ -269,10 +269,10 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Sumber:</label>
-                        <input id="source" type="search" name="source" class="form-control" placeholder="Contoh: BD PROVINSI BALI 2022" value="{{ Request::get('source') }}">
+                        <input id="source" type="search" name="source" class="form-control" placeholder="Contoh: BD KABUPATEN LANGKAT 2022" value="{{ Request::get('source') }}">
                     </div>
                     <label class="form-label">Penandatangan:</label>
-                    <input id="author" type="search" name="author" class="form-control" placeholder="Contoh: Wayan Koster" value="{{ Request::get('author') }}">
+                    <input id="author" type="search" name="author" class="form-control" placeholder="Contoh: Faisal Hasrimy" value="{{ Request::get('author') }}">
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@
 @include('jdih.homepage.slide')
 
 <!-- Welcome -->
-<section class="bg-dark">`
+<!-- <section class="bg-dark">`
     <div class="container pt-5 pb-0">
         <div class="content-wrapper">
             <div class="content row mb-5">
@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-12 col-md-9 text-light">
                     <h2 class="mb-3 text-handwriting">Sekapur Sirih</h2>
-                    <p class="fs-lg">Situs ini merupakan situs resmi Biro Hukum Setda Provinsi Bali. Situs ini memuat data dan informasi-informasi produk hukum baik produk hukum pusat maupun daerah. Disamping itu, situs ini memuat pula informasi mengenai buku-buku referensi tentang hukum yang dimiliki oleh Biro Hukum Provinsi Bali.<br></p>
+                    <p class="fs-lg">Situs ini merupakan situs resmi Bagian Hukum Setda Kab. Langkat. Situs ini memuat data dan informasi-informasi produk hukum baik produk hukum pusat maupun daerah. Disamping itu, situs ini memuat pula informasi mengenai buku-buku referensi tentang hukum yang dimiliki oleh Bagian Hukum Setda Kab. Langkat.<br></p>
                     <div class="author mt-4">
                         <span class="fw-semibold">IDA BAGUS GEDE SUDARSANA, SH</span><br>
                         <span class="text-light fs-sm">Kepala Biro  Hukum</span>
@@ -23,7 +23,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- /welcome -->
 
 <!-- Legislation summaries -->
@@ -113,72 +113,72 @@
                 <!-- Popular law -->
                 <div class="row pb-5 gx-5">
                     <div class="col-xl-6 m-auto">
-                        <figure id="adobe-dc-view" data-file="{{ $popularLaw->masterDocumentSource }}" data-name="{{ $popularLaw->masterDocument()->media->file_name }}" class="rounded shadow" style="height: 700px;">
+                        <figure id="adobe-dc-view" data-file="{{ $popularLaw->masterDocumentSource }}" data-name="{{ $popularLaw->masterDocument()->media->file_name }}" class="rounded shadow" style="height: 500px;">
                         </figure>
                         @include('jdih.legislation.pdfEmbed', ['el' => 'adobe-dc-view'])
                     </div>
                     <div class="col-xl-6">
                         <span class="fw-bold badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2 fs-lg px-3 py-2"><i class="ph-fire me-2"></i>Terhangat</span>
-                        <a href="{{ route('legislation.law.show', ['category' => $popularLaw->category->slug, 'legislation' => $popularLaw->slug]) }}" class="d-block display-6 fw-bold text-body mb-4">{{ $popularLaw->shortTitle }}</a>
-                        <div class="fs-lg">
-                            <div class="d-flex mb-3">
-                                <div class="me-4">
-                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-2">
+                        <a href="{{ route('legislation.law.show', ['category' => $popularLaw->category->slug, 'legislation' => $popularLaw->slug]) }}" class="d-block fs-4 fw-bold text-body mb-4">{{ $popularLaw->shortTitle }}</a>
+                        <div class="fs-md">
+                            <div class="d-flex mb-1">
+                                <div class="me-2">
+                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-1">
                                         <i class="ph-check"></i>
                                     </div>
                                 </div>
                                 <div class="row flex-fill">
                                     <div class="col-6">
-                                        <h4 class="mb-1 fw-bold">Jenis Dokumen</h4>
+                                        <h6 class="mb-1 fw-bold">Jenis Dokumen</h6>
                                         <u><a href="{{ route('legislation.law.category', ['category' => $popularLaw->category->slug]) }}" class="text-body"> {{ $popularLaw->category->name }}</a></u>
                                     </div>
                                     <div class="col-6">
-                                        <h4 class="mb-1 fw-bold">Nomor</h4>
+                                        <h6 class="mb-1 fw-bold">Nomor</h6>
                                         <p class="mb-0">{{ $popularLaw->code_number }}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex mb-3">
-                                <div class="me-4">
-                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-2">
+                            <div class="d-flex mb-1">
+                                <div class="me-2">
+                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-1">
                                         <i class="ph-check"></i>
                                     </div>
                                 </div>
                                 <div class="flex-fill">
-                                    <h4 class="mb-1 fw-bold">Judul</h4>
+                                    <h6 class="mb-1 fw-bold">Judul</h6>
                                     <p class="mb-0">{{ $popularLaw->title }}</p>
                                 </div>
                             </div>
-                            <div class="d-flex mb-3">
-                                <div class="me-4">
-                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-2">
+                            <div class="d-flex mb-1">
+                                <div class="me-2">
+                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-1">
                                         <i class="ph-check"></i>
                                     </div>
                                 </div>
                                 <div class="row flex-fill">
                                     <div class="col-6">
-                                        <h4 class="mb-1 fw-bold">Tgl. Penetapan</h4>
+                                        <h6 class="mb-1 fw-bold">Tgl. Penetapan</h6>
                                         <p class="mb-0">{{ $popularLaw->timeformatted($popularLaw->approved, "j F Y") }}</p>
                                     </div>
                                     <div class="col-6">
-                                        <h4 class="mb-1 fw-bold">Tgl. Pengundangan</h4>
+                                        <h6 class="mb-1 fw-bold">Tgl. Pengundangan</h6>
                                         <p class="mb-0">{{ $popularLaw->timeformatted($popularLaw->published, "j F Y") }}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex mb-3">
-                                <div class="me-4">
-                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-2">
+                            <div class="d-flex mb-1">
+                                <div class="me-2">
+                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-1">
                                         <i class="ph-check"></i>
                                     </div>
                                 </div>
                                 <div class="row flex-fill">
                                     <div class="col-6">
-                                        <h4 class="mb-1 fw-bold">Subjek</h4>
+                                        <h6 class="mb-1 fw-bold">Subjek</h6>
                                         <p class="mb-0">{{ $popularLaw->subject }}</p>
                                     </div>
                                     <div class="col-6">
-                                        <h4 class="mb-1 fw-bold">Status</h4>
+                                        <h6 class="mb-1 fw-bold">Status</h6>
                                         <p class="mb-0">
                                             <a href="{{ route('legislation.law.index', ['statuses[]' => $popularLaw->status->value]) }}" class="text-body">{!! $popularLaw->status->badge() !!}</a>
                                         </p>
@@ -186,20 +186,20 @@
                                 </div>
                             </div>
                             <div class="d-flex mb-3">
-                                <div class="me-4">
-                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-2">
+                                <div class="me-2">
+                                    <div class="bg-danger bg-opacity-10 text-danger lh-1 rounded-pill p-1">
                                         <i class="ph-check"></i>
                                     </div>
                                 </div>
                                 <div class="row flex-fill">
                                     <div class="col-6">
-                                        <h4 class="mb-1 fw-bold">Pemrakarsa</h4>
+                                        <h6 class="mb-1 fw-bold">Pemrakarsa</h6>
                                         <u>
                                             <a href="{{ route('legislation.law.index', ['institutes[]' => $popularLaw->institute->slug]) }}" class="text-body">{{ $popularLaw->institute->name }}</a>
                                         </u>
                                     </div>
                                     <div class="col-6">
-                                        <h4 class="mb-1 fw-bold">Urusan Pemerintahan</h4>
+                                        <h6 class="mb-1 fw-bold">Urusan Pemerintahan</h6>
                                         @if($popularLaw->matters->count() > 0)
                                             <ul class="list-inline mb-0">
                                                 @foreach ($popularLaw->matters as $matter)
@@ -212,7 +212,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex mt-5">
+                            <div class="d-flex mt-1">
                                 <a href="{{ route('legislation.law.show', ['category' => $popularLaw->category->slug, 'legislation' => $popularLaw->slug]) }}" class="btn btn-outline-dark lift px-3 me-3 fw-semibold">Lihat Detail<i class="ph-arrow-right ms-2"></i></a>
                                 @isset($popularLaw->masterDocumentSource)
                                     <form action="{{ route('legislation.download', $popularLaw->masterDocument()->id) }}" method="post">
@@ -244,7 +244,7 @@
                                     <a href="{{ route('legislation.law.show', ['category' => $law->category->slug, 'legislation' => $law->slug])}}" class="text-body link-danger">
                                         <div class="card-header border-0 pb-0">
                                             <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill mb-2">{{ $law->category->name }}</span>
-                                            <h4 class="fw-bold mb-0">{{ $law->shortTitle }}</h4>
+                                            <h6 class="fw-bold mb-0">{{ $law->shortTitle }}</h6>
                                         </div>
                                         <div class="card-body fs-lg pb-0">
                                             <p class="mb-0 text-body">{{ $law->title }}</p>
@@ -368,11 +368,11 @@
 <!-- /legislation statistic -->
 
 <!-- Latest member's laws -->
-<section class="bg-dark bg-opacity-3">
+<!-- <section class="bg-dark bg-opacity-3">
     <div class="container py-5">
         <div class="content-wrapper">
             <div class="content py-4">
-                <h2 class="fw-bold section-title text-center mb-4 pb-2">Produk Hukum anggota JDIH Provinsi Bali</h2>
+                <h2 class="fw-bold section-title text-center mb-4 pb-2">Produk Hukum anggota JDIH DPRD Kabupaten Langkat</h2>
                 <div class="row gx-4">
                     @foreach ($latestLaws as $law)
                         <div class="col-xl-4 my-3">
@@ -396,7 +396,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- /latest member's laws -->
 
 @if(isset($latestNews) AND $latestNews->count() > 0)
@@ -453,7 +453,7 @@
                             <iframe src="https://www.youtube.com/embed/Y5ZlcHiGthw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <div class="col-xl-7 text-light">
+                    <!-- <div class="col-xl-7 text-light">
                         <span class="d-block display-7 fw-bold mb-4">Pertanyaan yang sering diajukan</span>
                         <div class="card shadow">
                             <div class="card-header border-bottom-0 bg-dark bg-opacity-85">
@@ -498,7 +498,7 @@
                         </div>
 
                         <a href="#" class="btn btn-outline-danger lift px-3 me-3 mt-2 fw-semibold">Lihat Pertanyaan lainnya<i class="ph-arrow-right ms-2"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -514,17 +514,17 @@
 
                 @if (isset($members) AND $members->count() > 0)
                     <div class="row gx-5 mb-5">
-                        <div class="col-xl-4 m-auto">
-                            <h3 class="display-7 fw-bold">Struktur Pengelola {!! $appName !!}</h3>
-                            <p class="fs-lg mb-3">Donec id elit non mi porta gravida at eget metus. Morbi leo risus, porta ac consectetur ac, vestibulum at eros tempus porttitor.</p>
-                            <button type="button" class="btn btn-lg btn-danger lift px-3 fw-semibold">
+                        <div class="col-xl-3 m-auto">
+                            <h3 class="display-8 fw-bold">Struktur Pengelola {!! $appName !!}</h3>
+                            <p class="fs-lg mb-3"></p>
+                            <button type="button" class="btn btn-lg btn-danger lift px-3 fw-semibold mb-3">
                                 Lihat Semua Pengelola<i class="ph-arrow-right ms-2"></i>
                             </button>
                         </div>
-                        <div class="col-xl-8">
-                            <div id="member-slider" class="row gx-4">
+                        <div class="col-xl-9">
+                            <div id="member-slider" class="row gx-2">
                                 @foreach ($members as $member)
-                                    <div class="col-xl-4">
+                                    <div class="col-4">
                                         <div class="card shadow h-100">
                                             <div class="card-body text-center">
                                                 <img class="img-fluid rounded-circle mb-3" src="{{ $member->pictureThumbUrl }}" alt="{{ $member->name }}" width="170" height="170">
@@ -540,7 +540,7 @@
                     </div>
                 @endif
 
-                <h2 class="fw-bold section-title text-center mb-4 pb-2">Aplikasi Terkait JDIH</h2>
+                <!-- <h2 class="fw-bold section-title text-center mb-4 pb-2">Aplikasi Terkait JDIH</h2>
                 <div class="row gx-5">
 
                     <div class="col-xl-4">
@@ -588,7 +588,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -602,7 +602,7 @@
         <div class="container py-5">
             <div class="content-wrapper">
                 <div class="content py-4">
-                    <div class="row gx-5 mb-5">
+                    <!-- <div class="row gx-5 mb-5">
                         <div class="col-xl-7">
                             <figure>
                                 <img src="{{ asset('assets/jdih/images/illustrations/1.png') }}" class="img-fluid">
@@ -648,7 +648,7 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div id="banner-slider" class="row gx-5">
                         @foreach ($banners as $banner)

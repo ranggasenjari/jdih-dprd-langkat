@@ -28,9 +28,9 @@
 
 <!-- Page container -->
 <div class="page-content container">
-
-    @include('jdih.legislation.aside')
-
+    @if (!$isMobile)
+        @include('jdih.legislation.leftbar')
+    @endif
     <!-- Main content -->
     <div class="content-wrapper">
 
@@ -98,7 +98,7 @@
                                 <li class="list-inline-item"><i class="ph-calendar-blank me-2"></i>{{ $legislation->dateFormatted($legislation->published_at) }}</li>
                                 <li class="list-inline-item"><i class="ph-eye me-2"></i>{{ $legislation->view }}</li>
                                 <li class="list-inline-item"><i class="ph-download me-2"></i>{{ $legislation->documents->sum('download') }}</li>
-                                <li class="list-inline-item"><i class="ph-heart text-pink me-2"></i>12</li>
+                                <!-- <li class="list-inline-item"><i class="ph-heart text-pink me-2"></i>12</li> -->
                             </ul>
 
                             <p class="fs-lg mb-0">{!! Str::highlightPhrase($legislation->excerpt, Request::get('title')) !!}</p>

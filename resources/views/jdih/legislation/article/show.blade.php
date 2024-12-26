@@ -37,17 +37,17 @@
             <main class="col-xl-8">
                 <article class="card shadow-sm mb-4">
                     <div class="card-header px-4 pb-0 pt-4 border-bottom-0">
-                        <h2 class="d-block display-6 fw-bold mb-2">{{ $legislation->shortTitle }}</h2>
+                        <h2 class="d-block display-8 fw-bold mb-2">{{ $legislation->shortTitle }}</h2>
                         <ul class="post-meta list-inline list-inline-bullet text-muted">
-                            <li class="list-inline-item"><i class="ph-clock me-2"></i>{{ $legislation->timeFormatted($legislation->published_at, "G:i") }} WITA</li>
+                            <li class="list-inline-item"><i class="ph-clock me-2"></i>{{ $legislation->timeFormatted($legislation->published_at, "G:i") }} WIB</li>
                             <li class="list-inline-item"><i class="ph-calendar-blank me-2"></i>{{ $legislation->timeFormatted($legislation->published_at, "l, j F Y") }}</li>
                             <li class="list-inline-item"><i class="ph-user me-2"></i>{{ $legislation->user->name }}</li>
                         </ul>
                     </div>
 
                     <!-- Meta data -->
-                    <section class="card-body fs-lg p-4">
-                        <div class="d-flex mb-3">
+                    <section class="card-body fs-sm p-4">
+                        <div class="d-flex mb-1">
                             <div class="me-4">
                                 <div class="bg-pink bg-opacity-10 text-pink lh-1 rounded-pill p-2">
                                     <i class="ph-check"></i>
@@ -55,60 +55,60 @@
                             </div>
                             <div class="row flex-fill">
                                 <div class="col-6">
-                                    <h4 class="mb-1 fw-bold">Jenis Artikel</h4>
+                                    <h6 class="mb-1 fw-bold">Jenis Artikel</h6>
                                     <u><a href="{{ route('legislation.article.category', ['category' => $legislation->category->slug]) }}" class="text-body"> {{ $legislation->category->name }}</a></u>
                                 </div>
                                 <div class="col-6">
-                                    <h4 class="mb-1 fw-bold">Tahun Terbit</h4>
+                                    <h6 class="mb-1 fw-bold">Tahun Terbit</h6>
                                     <p class="mb-0">{{ $legislation->year }}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex mb-3">
+                        <div class="d-flex mb-1">
                             <div class="me-4">
                                 <div class="bg-pink bg-opacity-10 text-pink lh-1 rounded-pill p-2">
                                     <i class="ph-check"></i>
                                 </div>
                             </div>
                             <div class="flex-fill">
-                                <h4 class="mb-1 fw-bold">T.E.U. Orang/Badan</h4>
+                                <h6 class="mb-1 fw-bold">T.E.U. Orang/Badan</h6>
                                 <p class="mb-0">{{ $legislation->author }}</p>
                             </div>
                         </div>
-                        <div class="d-flex mb-3">
+                        <div class="d-flex mb-1">
                             <div class="me-4">
                                 <div class="bg-pink bg-opacity-10 text-pink lh-1 rounded-pill p-2">
                                     <i class="ph-check"></i>
                                 </div>
                             </div>
                             <div class="flex-fill">
-                                <h4 class="mb-1 fw-bold">Tempat Terbit</h4>
+                                <h6 class="mb-1 fw-bold">Tempat Terbit</h6>
                                 <p class="mb-0">{{ $legislation->place }}</p>
                             </div>
                         </div>
-                        <div class="d-flex mb-3">
+                        <div class="d-flex mb-1">
                             <div class="me-4">
                                 <div class="bg-pink bg-opacity-10 text-pink lh-1 rounded-pill p-2">
                                     <i class="ph-check"></i>
                                 </div>
                             </div>
                             <div class="flex-fill">
-                                <h4 class="mb-1 fw-bold">Sumber</h4>
+                                <h6 class="mb-1 fw-bold">Sumber</h6>
                                 <p class="mb-0">{{ $legislation->source }}</p>
                             </div>
                         </div>
-                        <div class="d-flex mb-3">
+                        <div class="d-flex mb-1">
                             <div class="me-4">
                                 <div class="bg-pink bg-opacity-10 text-pink lh-1 rounded-pill p-2">
                                     <i class="ph-check"></i>
                                 </div>
                             </div>
                             <div class="flex-fill">
-                                <h4 class="mb-1 fw-bold">Subjek</h4>
+                                <h6 class="mb-1 fw-bold">Subjek</h6>
                                 <p class="mb-0">{{ $legislation->subject }}</p>
                             </div>
                         </div>
-                        <div class="d-flex mb-3">
+                        <div class="d-flex mb-1">
                             <div class="me-4">
                                 <div class="bg-pink bg-opacity-10 text-pink lh-1 rounded-pill p-2">
                                     <i class="ph-check"></i>
@@ -116,23 +116,23 @@
                             </div>
                             <div class="row flex-fill">
                                 <div class="col-6">
-                                    <h4 class="mb-1 fw-bold">Bidang Hukum</h4>
+                                    <h6 class="mb-1 fw-bold">Bidang Hukum</h6>
                                     <u><a href="{{ route('legislation.article.index', ['fields[]' => $legislation->field->slug]) }}" class="text-body">{{ $legislation->field->name }}</a></u>
                                 </div>
                                 <div class="col-6">
-                                    <h4 class="mb-1 fw-bold">Bahasa</h4>
+                                    <h6 class="mb-1 fw-bold">Bahasa</h6>
                                     <p class="mb-0">{{ $legislation->language }}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex mb-3">
+                        <div class="d-flex mb-1">
                             <div class="me-4">
                                 <div class="bg-pink bg-opacity-10 text-pink lh-1 rounded-pill p-2">
                                     <i class="ph-check"></i>
                                 </div>
                             </div>
                             <div class="flex-fill">
-                                <h4 class="mb-1 fw-bold">Lokasi</h4>
+                                <h6 class="mb-1 fw-bold">Lokasi</h6>
                                 <p class="mb-0">{{ $legislation->location }}</p>
                             </div>
                         </div>

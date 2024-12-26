@@ -2,7 +2,7 @@
 
     @if (!empty($laws) AND count($laws) > 0)
         <div class="dropdown-header">
-            Peraturan Perundang-undangan
+            Dokumen Peraturan
             @if (count($laws) == 3)
                 <a href="{{ route('admin.legislation.law.index', ['search' => $term]) }}" class="float-end">
                     Lihat semua

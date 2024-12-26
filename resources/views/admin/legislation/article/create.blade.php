@@ -20,7 +20,7 @@
 
                     <div class="card card-body">
                         <div class="alert alert-info border-0">
-                            Penjelasan dan pedoman tata cara penulisan metadata artikel dapat dilihat pada <a href="https://jdih.baliprov.go.id/produk-hukum/peraturan-perundang-undangan/permenkumham/24804">Peraturan Menteri Hukum dan Hak Asasi Manusia Nomor 8 Tahun 2019 tentang Standar Pengelolaan Dokumen dan Informasi Hukum</a>.
+                            Penjelasan dan pedoman tata cara penulisan metadata artikel dapat dilihat pada <a href="https://jdih-dprd.langkatkab.go.id/produk-hukum/dokumen-peraturan/permenkumham/24804">Peraturan Menteri Hukum dan Hak Asasi Manusia Nomor 8 Tahun 2019 tentang Standar Pengelolaan Dokumen dan Informasi Hukum</a>.
                         </div>
 
                         <div class="row">
@@ -114,7 +114,7 @@
                                 <div class="mb-3">
                                     <label for="location" class="col-form-label">Lokasi</label>
                                     <input type="text" name="location" id="location" class="form-control @error('location') is-invalid @enderror" value="{{ old('location') }}">
-                                    <div class="form-text text-muted">Tempat fisik artikel disimpan. Contoh: Biro Hukum Provinsi Bali.</div>
+                                    <div class="form-text text-muted">Tempat fisik artikel disimpan. Contoh: Sekretariat Daerah.</div>
                                     @error('location')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror
@@ -123,7 +123,7 @@
                                 <div class="mb-3">
                                     <label for="author" class="col-form-label">T.E.U. Orang/Badan</label>
                                     <input type="text" name="author" id="author" class="form-control @error('author') is-invalid @enderror" value="{{ old('author') }}">
-                                    <div class="form-text text-muted">Format penulisan: Nama pengarang (tanpa gelar dan dibalik). Contoh: THAMRIN, HUSNI.</div>
+                                    <div class="form-text text-muted">Format penulisan: Nama pengarang (tanpa gelar dan dibalik). Contoh: RANGGA, SENJARI.</div>
                                     @error('author')
                                         <div class="invalid-feedback">{{ $message }}</div>
                                     @enderror

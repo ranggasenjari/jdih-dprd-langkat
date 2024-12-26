@@ -43,11 +43,11 @@ Route::name('legislation.')->group(function () {
     });
 
     Route::controller(LawController::class)->group(function () {
-        Route::get('/produk-hukum/peraturan-perundang-undangan', 'index')
+        Route::get('/produk-hukum/dokumen-peraturan', 'index')
             ->name('law.index');
-        Route::get('/produk-hukum/peraturan-perundang-undangan/{category:slug}', 'category')
+        Route::get('/produk-hukum/dokumen-peraturan/{category:slug}', 'category')
             ->name('law.category');
-        Route::get('/produk-hukum/peraturan-perundang-undangan/{category:slug}/{legislation:slug}', 'show')
+        Route::get('/produk-hukum/dokumen-peraturan/{category:slug}/{legislation:slug}', 'show')
             ->name('law.show');
     });
 

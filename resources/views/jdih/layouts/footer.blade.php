@@ -1,12 +1,12 @@
 <!-- Footer -->
 <section class="bg-dark text-light">
-    <div class="container py-5" style="background-image: url({{ asset('assets/jdih/images/backgrounds/indonesia-map.png') }}); background-position:center; background-repeat: no-repeat">
+    <div class="container py-5" style="background-image: url({{ asset('assets/jdih/images/backgrounds/langkat-map.png') }}); background-position:center; background-repeat: no-repeat">
         <div class="content-wrapper">
             <div class="content py-4">
                 <div class="row gx-5">
-                    <div class="col-lg-3 fs-lg">
-                        <div class="d-flex mb-3">
-                            <img src="{{ $appLogoUrl }}" alt="{{ $appName }}" class="me-3" height="58">
+                    <div class="col-lg-4 fs-md">
+                        <div class="d-flex mb-3 align-items-center">
+                            <img src="{{ $appLogoUrl }}" alt="{{ $appName }}" class="me-2" height="42">
                             <h4 class="fw-bold mb-0">{!! $appName !!}</h4>
                         </div>
                         {!! $welcome->excerpt !!}
@@ -22,7 +22,7 @@
                             <li class="mb-2"><a href="#" class="text-light">Kontak</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <h4 class="fw-bold">Kontak Kami</h4>
                         <dl class="row mb-0">
                             <dt class="col-sm-1"><i class="ph-phone"></i></dt>
@@ -98,7 +98,7 @@
                             </li>
 						</ul>
                         <hr>
-                        <h5 class="fw-bold">Apakah pelayanan dokumentasi di {{ $company }} dirasa puas?</h5>
+                        <h5 class="fw-bold">Bagaimana JDIH {{ $company }}?</h5>
                         <a href="{{ route('questionner') }}" target="_blank" class="btn btn-outline-yellow btn-icon">
                             <i class="ph-pencil-line ms-lg-1"></i>
                             <span class="d-none d-lg-inline-block ms-2 me-1">Ikuti Survei IKM</span>
@@ -207,7 +207,7 @@
                             <div class="row mb-3">
                                 <div class="col">
                                     <label for="author" class="d-block form-label">T.E.U. Orang / Badan</label>
-                                    <input type="text" name="author" id="author" class="form-control" placeholder="Contoh: Bali">
+                                    <input type="text" name="author" id="author" class="form-control" placeholder="Contoh: Langkat">
                                 </div>
                                 <div class="col">
                                     <label for="subject" class="form-label">Subjek</label>

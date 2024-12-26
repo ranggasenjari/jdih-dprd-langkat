@@ -26,7 +26,7 @@ class Institute extends Model
         'name',
         'slug',
         'abbrev',
-        'code',
+        // 'code',
         'desc',
         'sort',
     ];

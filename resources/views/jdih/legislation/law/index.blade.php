@@ -34,8 +34,9 @@
 
 <!-- Page container -->
 <div class="page-content container">
-
-    @include('jdih.legislation.leftbar', ['view' => 'jdih.legislation.law.filter'])
+    @if (!$isMobile)
+        @include('jdih.legislation.leftbar', ['view' => 'jdih.legislation.law.filter'])
+    @endif
 
     <!-- Main content -->
     <div class="content-wrapper">
@@ -67,7 +68,14 @@
                     @endisset
                 </p>
                 <div class="ms-auto my-auto">
+                    @if (!$isMobile)
                     <span class="d-inline-block me-2">Urutkan</span>
+                    @endif
+                    @if ($isMobile)
+                    <button id="openSidebar" class="lg:hidden btn btn-dark rounded" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+                        Filter
+                    </button>
+                    @endif
                     <div class="btn-group">
                         <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">
                             @if(Request::get('order'))
@@ -92,7 +100,18 @@
                     </div>
                 </div>
             </section>
-
+            
+            @if ($isMobile)
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Filter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    @include('jdih.legislation.leftbar', ['view' => 'jdih.legislation.law.filter'])
+                </div>
+            </div>
+            @endif
             @forelse ($legislations as $legislation)
                 <article class="card card-body shadow mb-4">
                     <div class="d-sm-flex align-items-sm-start">
@@ -111,7 +130,7 @@
                                 <li class="list-inline-item"><i class="ph-calendar-blank me-2"></i>{{ $legislation->dateFormatted($legislation->published_at) }}</li>
                                 <li class="list-inline-item"><i class="ph-eye me-2"></i>{{ $legislation->view }}</li>
                                 <li class="list-inline-item"><i class="ph-download me-2"></i>{{ $legislation->documents->sum('download') }}</li>
-                                <li class="list-inline-item"><i class="ph-heart text-pink me-2"></i>12</li>
+                                <!-- <li class="list-inline-item"><i class="ph-heart text-pink me-2"></i>12</li> -->
                             </ul>
 
                             <p class="fs-lg">{!! Str::highlightPhrase($legislation->excerpt, Request::get('title')) !!}</p>

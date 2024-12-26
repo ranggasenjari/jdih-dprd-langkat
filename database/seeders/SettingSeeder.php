@@ -16,17 +16,17 @@ class SettingSeeder extends Seeder
     public function run()
     {
         $settings = [
-            'appName'       => 'JDIH CMS',
-            'appDesc'       => 'Jaringan Dokumentasi dan Informasi Hukum',
+            'appName'       => 'JDIH DPRD Kabupaten Langkat',
+            'appDesc'       => 'Jaringan Dokumentasi dan Informasi Hukum DPRD Kabupaten Langkat',
             'appLogo'       => asset('assets/admin/images/logo_icon.svg'),
             'appUrl'        => url()->current(),
-            'company'       => 'Balemedia',
-            'companyUrl'    => 'https://balemedia.id',
+            'company'       => 'Pemerintah Kabupaten Langkat',
+            'companyUrl'    => 'https://langkatkab.go.id',
             'address'       => fake()->streetAddress(),
             'city'          => fake()->city(),
             'district'      => fake()->city(),
             'regency'       => fake()->city(),
-            'province'      => 'Bali',
+            'province'      => 'Sumatera Utara',
             'zip'           => fake()->postcode(),
             'phone'         => fake()->phoneNumber(),
             'fax'           => null,
@@ -39,7 +39,7 @@ class SettingSeeder extends Seeder
             'jdihnLogo'     => asset('assets/admin/images/jdihn-logo-web.png'),
             'jdihnTitle'    => 'Jaringan Dokumentasi dan Informasi Hukum Nasional',
             'jdihnUrl'      => 'https://jdihn.go.id',
-            'region_code'   => 0051,
+            'region_code'   => 1205,
             'maintenance'   => null,
             'questionner'   => "{\"title\":\"Indeks Kepuasan Masyarakat\",\"desc\":\"Untuk mengetahui tingkat kepuasan masyarakat terhadap layanan JDIH\",\"active\":1}",
         ];

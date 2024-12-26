@@ -9,12 +9,12 @@
         </div>
 
         <div class="navbar-brand flex-1 flex-lg-0">
-            <a href="index.html" class="d-inline-flex align-items-center">
+            <a href="{{ $appUrl }}" class="d-inline-flex align-items-center">
                 <img src="{{ $appLogoUrl }}" alt="{{ $appName }}">
             </a>
         </div>
-
-        <div class="nav order-2 order-lg-1 ms-2 ms-lg-3 me-lg-auto">
+        @if(!$isMobile)
+        <div class="nav fs-sm order-2 order-lg-1 ms-2 ms-lg-3 me-lg-auto">
             <span class="navbar-text d-block d-xl-inline-block">
                 <i class="ph-bank me-1"></i>
                 {{ $company }}
@@ -28,6 +28,7 @@
                 {{ $phone }}
             </span>
         </div>
+        @endif
 
         <ul class="navbar-nav ms-lg-2 order-1 order-lg-2 ">
             <li class="nav-item">

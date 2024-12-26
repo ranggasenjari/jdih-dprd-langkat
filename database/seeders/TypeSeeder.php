@@ -17,8 +17,8 @@ class TypeSeeder extends Seeder
     {
         $types = [
             [
-                'name'  => 'peraturan perundang-undangan',
-                'slug'  => 'peraturan-perundang-undangan',
+                'name'  => 'Dokumen Peraturan',
+                'slug'  => 'dokumen-peraturan',
                 'sort'  => 1,
                 'route' => 'law',
             ],

@@ -34,9 +34,9 @@
 
 <!-- Page container -->
 <div class="page-content container">
-
-    @include('jdih.legislation.leftbar', ['view' => 'jdih.legislation.monograph.filter'])
-
+    @if (!$isMobile)
+        @include('jdih.legislation.leftbar', ['view' => 'jdih.legislation.monograph.filter'])
+    @endif
     <!-- Main content -->
     <div class="content-wrapper">
 

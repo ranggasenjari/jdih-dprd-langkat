@@ -43,9 +43,9 @@
 
 <!-- Page container -->
 <div class="page-content container">
-
-    @include('jdih.post.aside', ['view' => 'jdih.post.news.filter'])
-
+    @if (!$isMobile)
+        @include('jdih.post.aside', ['view' => 'jdih.post.news.filter'])
+    @endif
     <!-- Main content -->
     <div class="content-wrapper">
 

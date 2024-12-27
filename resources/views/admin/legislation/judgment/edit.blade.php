@@ -28,7 +28,7 @@
                             <div class="col-lg-8 offset-lg-2">
 
                                 <div class="mb-3">
-                                    <label class="col-form-label" for="category_id">Jenis Putusan</label>
+                                    <label class="col-form-label" for="category_id">Jenis Putusan <span class="text-danger">*</span></label>
                                     <select name="category_id" id="category_id" autofocus class="select @error('category_id') is-invalid @enderror">
                                         <option value="">Pilih Jenis</option>
                                         @foreach ($categories as $key => $value)
@@ -41,7 +41,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="col-form-label" for="title">Judul:</label>
+                                    <label class="col-form-label" for="title">Judul <span class="text-danger">*</span>:</label>
                                     <textarea name="title" id="title" rows="4" spellcheck="false" class="form-control @error('title') is-invalid @enderror">{{ $judgment->title }}</textarea>
                                     <div class="form-text text-muted">Format penulisan: Nama jenis putusan - nomor putusan - tahun putusan - para pihak yang berperkara. Contoh: Putusan Mahkamah Agung Nomor 319 PK/Pdt/2016 tahun 2016 Rico Widjaya vs Kementrian Pariwisata dan Ekonomi Kreatif c.q Sekolah Tinggi Pariwisata Bandung, Dkk.</div>
                                     @error('title')
@@ -50,7 +50,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="code_number" class="col-form-label">Nomor Putusan</label>
+                                    <label for="code_number" class="col-form-label">Nomor Putusan <span class="text-danger">*</span></label>
                                     <input type="text" name="code_number" id="code_number" class="form-control @error('code_number') is-invalid @enderror" value="{{ $judgment->code_number }}">
                                     <div class="form-text text-muted">Contoh: 319 PK/Pdt/2016.</div>
                                     @error('code_number')
@@ -59,7 +59,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="number" class="col-form-label">Nomor Urut Putusan</label>
+                                    <label for="number" class="col-form-label">Nomor Urut Putusan <span class="text-danger">*</span></label>
                                     <input type="number" name="number" id="number" class="form-control @error('number') is-invalid @enderror" value="{{ $judgment->number }}">
                                     <div class="form-text text-muted">Indeks nomor urutan putusan yang dipakai. Contoh: 319.</div>
                                     @error('number')
@@ -77,7 +77,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="year" class="col-form-label">Tahun Terbit</label>
+                                    <label for="year" class="col-form-label">Tahun Terbit <span class="text-danger">*</span></label>
                                     <input type="number" name="year" id="year" class="form-control @error('year') is-invalid @enderror" value="{{ $judgment->year }}">
                                     <div class="form-text text-muted">Tahun diterbitkannya putusan.</div>
                                     @error('year')
@@ -86,7 +86,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="published" class="col-form-label">Tgl. Dibacakan</label>
+                                    <label for="published" class="col-form-label">Tgl. Dibacakan <span class="text-danger">*</span></label>
                                     <div class="input-group">
                                         <span class="input-group-text @error('published') is-invalid @enderror"><i class="ph-calendar-blank"></i></span>
                                         <input type="text" class="form-control daterange-single @error('published') is-invalid @enderror" name="published" value="{{ $judgment->published }}">
@@ -98,7 +98,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="place" class="col-form-label">Tempat Peradilan</label>
+                                    <label for="place" class="col-form-label">Tempat Peradilan <span class="text-danger">*</span></label>
                                     <input type="text" name="place" id="place" class="form-control @error('place') is-invalid @enderror" value="{{ $judgment->place }}">
                                     <div class="form-text text-muted">Kota tempat perkara diputuskan.</div>
                                     @error('place')
@@ -107,7 +107,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="source" class="col-form-label">Sumber</label>
+                                    <label for="source" class="col-form-label">Sumber <span class="text-danger">*</span></label>
                                     <input type="text" name="source" id="source" class="form-control @error('source') is-invalid @enderror" value="{{ $judgment->source }}">
                                     <div class="form-text text-muted">Contoh: Mahkamah Agung.</div>
                                     @error('source')
@@ -132,7 +132,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="field_id" class="col-form-label">Bidang Hukum</label>
+                                    <label for="field_id" class="col-form-label">Bidang Hukum <span class="text-danger">*</span></label>
                                     <div id="field-options" class="@error('field_id') is-invalid @enderror">
                                         <select name="field_id" id="field_id" class="select-search">
                                             <option value="">Pilih Bidang Hukum</option>
@@ -156,7 +156,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="author" class="col-form-label">T.E.U. Badan</label>
+                                    <label for="author" class="col-form-label">T.E.U. Badan <span class="text-danger">*</span></label>
                                     <input type="text" name="author" id="author" class="form-control @error('author') is-invalid @enderror" value="{{ $judgment->author }}">
                                     <div class="form-text text-muted">Lembaga yang bertanggung jawab atas isi putusan. Contoh: Indonesia. Mahkamah Agung.</div>
                                     @error('author')
@@ -165,7 +165,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="subject" class="col-form-label">Subjek</label>
+                                    <label for="subject" class="col-form-label">Subjek <span class="text-danger">*</span></label>
                                     <textarea name="subject" id="subject" rows="4" spellcheck="false" class="form-control @error('subject') is-invalid @enderror">{{ $judgment->subject }}</textarea>
                                     <div class="form-text text-muted">Pokok perkara dalam putusan.</div>
                                     @error('subject')

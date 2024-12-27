@@ -117,21 +117,14 @@
             <div class="mb-3">
                 <label class="col-form-label">Status</label>
                 <div class="form-check-horizontal">
-                    @foreach ($lawStatusOptions as $index => $status)                        
+                    @foreach ($lawStatusOptions as $status)                        
                         <label class="form-check form-check-inline">
-                            <input 
-                                type="radio" 
-                                class="form-check-input" 
-                                name="status" 
-                                value="{{ $status->value }}" 
-                                @checked(old('status', (empty($law) && $index === 0) || (isset($law) && $law->status === $status->value)))
-                            >
+                            <input type="radio" class="form-check-input" name="status" value="{{ $status->value }}" @checked(old('status', (empty($law) OR (isset($law) AND $law->status === $status)) ? true : false))>
                             <span class="form-check-label">{{ $status->label() }}</span>
                         </label>
                     @endforeach
                 </div>
             </div>
-
 
             <div class="mb-3">
                 <label for="field_id" class="col-form-label">Bidang Hukum</label>

@@ -21,7 +21,7 @@
                     </div>
                 </div>
 
-                @cannot('isAuthor')                    
+                @cannot('isAuthor')
                     <div class="ms-sm-auto my-sm-auto">
                         <div class="d-flex justify-content-center">
                             <button type="button" class="btn btn-indigo" data-bs-toggle="modal" data-bs-target="#create-modal"><i class="ph-plus me-2"></i>Tambah</button>
@@ -60,7 +60,7 @@
                                 <a href="{{ route('admin.legislation.category.index', ['order' => 'total', 'sort' => $sortState] + Request::all()) }}" class="text-dark d-block">Total</a>
                             </th>
                             <th>Operator</th>
-                            @cannot('isAuthor')                                
+                            @cannot('isAuthor')
                                 <th width="1" class="text-center">Aksi</th>
                             @endcannot
                         </tr>
@@ -80,9 +80,12 @@
                                 <td class="text-center"><span class="badge bg-indigo rounded-pill">{{ $category->legislations->count() }}</span></td>
                                 <td>
                                     <div class="d-flex align-items-center">
+                                        @if ($category->user->picture)
                                         <div class="me-2">
                                             <img src="{{ $category->userPictureUrl($category->user->picture, $category->user->name) }}" alt="{{ $category->user->name }}" class="rounded-circle" width="32" height="32">
                                         </div>
+                                        @endif
+
                                         <div class="div">
                                             <span class="d-block">{{ $category->user->name }}</span>
                                             <abbr class="text-muted fs-sm" data-bs-popup="tooltip" title="{{ $category->dateFormatted($category->created_at, true) }}">{{ $category->dateFormatted($category->created_at) }}</abbr>
@@ -105,10 +108,10 @@
                         @empty
                             <tr class="table-warning"><td colspan="100" class="text-center text-warning">Tidak ada data</td></tr>
                         @endforelse
-                    </tbody>                   
-                                
+                    </tbody>
+
                     {{ $categories->links('admin.layouts.pagination') }}
-                    
+
                 </table>
             </div>
         </div>
@@ -125,4 +128,4 @@
 
 @section('script')
     @include('admin.legislation.category.script')
-@endsection 
+@endsection

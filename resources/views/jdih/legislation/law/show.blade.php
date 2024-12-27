@@ -157,7 +157,9 @@
                                 <div class="col-6">
                                     <h6 class="mb-0 fw-bold">Bidang Hukum</h6>
                                     <u>
+                                    @empty (!$legislation->field)
                                         <a href="{{ route('legislation.law.index', ['fields[]' => $legislation->field->slug]) }}" class="text-body">{{ $legislation->field->name }}</a>
+                                    @endempty
                                     </u>
                                 </div>
                                 <div class="col-6">
@@ -176,7 +178,9 @@
                                 <div class="col-6">
                                     <h6 class="mb-0 fw-bold">Pemrakarsa</h6>
                                     <u>
+                                    @empty (!$legislation->institute)
                                         <a href="{{ route('legislation.law.index', ['institutes[]' => $legislation->institute->slug]) }}" class="text-body">{{ $legislation->institute->name }}</a>
+                                    @endempty
                                     </u>
                                 </div>
                                 <div class="col-6">

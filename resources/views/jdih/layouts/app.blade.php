@@ -23,6 +23,7 @@
             <link href="{{ asset($style) }}" rel="stylesheet" type="text/css">
         @endforeach
     @endisset
+    <!-- @vite('resources/css/app.css') -->
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->

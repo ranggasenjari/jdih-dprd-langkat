@@ -8,7 +8,7 @@ A basic JDIH Content Management System application built with [Laravel 10](https
 Clone the repo locally:
 
 ```sh
-git clone https://github.com/harris-sontanu/jdih-cms.git jdih-cms
+git clone https://github.com/ranggasenjari/jdih-dprd-langkat.git jdih-cms
 cd jdih-cms
 ```
 

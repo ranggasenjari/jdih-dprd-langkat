@@ -5,25 +5,25 @@
 @include('jdih.homepage.slide')
 
 <!-- Welcome -->
-<!-- <section class="bg-dark">`
+<section class="bg-dark">`
     <div class="container pt-5 pb-0">
         <div class="content-wrapper">
             <div class="content row mb-5">
                 <div class="col-12 col-md-3">
-                    <img src="{{ asset('assets/admin/images/demo/users/face12.jpg') }}" class="rounded-circle d-block m-auto" height="160">
+                    <img src="{{ asset('assets/admin/images/demo/users/sekwan.jpg') }}" class="rounded-circle d-block m-auto" height="180">
                 </div>
                 <div class="col-12 col-md-9 text-light">
                     <h2 class="mb-3 text-handwriting">Sekapur Sirih</h2>
-                    <p class="fs-lg">Situs ini merupakan situs resmi Bagian Hukum Setda Kab. Langkat. Situs ini memuat data dan informasi-informasi produk hukum baik produk hukum pusat maupun daerah. Disamping itu, situs ini memuat pula informasi mengenai buku-buku referensi tentang hukum yang dimiliki oleh Bagian Hukum Setda Kab. Langkat.<br></p>
+                    <p class="fs-lg">Situs ini merupakan situs resmi JDIH Sekretariat DPRD Kab. Langkat. Situs ini memuat data dan informasi-informasi produk hukum baik produk hukum pusat maupun daerah. Disamping itu, situs ini memuat pula informasi mengenai buku-buku referensi tentang hukum yang dimiliki oleh DPRD Kab. Langkat.<br></p>
                     <div class="author mt-4">
-                        <span class="fw-semibold">IDA BAGUS GEDE SUDARSANA, SH</span><br>
-                        <span class="text-light fs-sm">Kepala Biro  Hukum</span>
+                        <span class="fw-semibold fs-lg">Drs. Basrah Pardomuan</span><br>
+                        <span class="text-light fs-sm">Sekretaris DPRD Kab. Langkat</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section> -->
+</section>
 <!-- /welcome -->
 
 <!-- Legislation summaries -->

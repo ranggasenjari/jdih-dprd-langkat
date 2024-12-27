@@ -8,7 +8,7 @@
         <div class="col-lg-8 offset-lg-2">
 
             <div class="mb-3">
-                <label class="col-form-label" for="category_id">Jenis Peraturan</label>
+                <label class="col-form-label" for="category_id">Jenis Peraturan <span class="text-danger">*</span></label>
                 <select name="category_id" id="category_id" autofocus class="select @error('category_id') is-invalid @enderror">
                     <option value="">Pilih Jenis</option>
                     @foreach ($categories as $key => $value)
@@ -21,7 +21,7 @@
             </div>
 
             <div class="mb-3">
-                <label class="col-form-label" for="title">Judul:</label>
+                <label class="col-form-label" for="title">Judul <span class="text-danger">*</span>:</label>
                 <textarea name="title" id="title" rows="4" spellcheck="false" class="form-control @if ($errors->get('title') OR $errors->get('slug')) is-invalid @endif">{{ old('title', empty($law) ? null : $law->title) }}</textarea>
                 <div class="form-text text-muted">Format penulisan: judul ditulis lengkap. Huruf kapital hanya di tahap awal kata. Contoh: Peraturan Bupati Langkat Nomor 39 Tahun 2022 Tentang Sistem Dan Prosedur Pengelolaan Keuangan Daerah.</div>
                 @if ($errors->get('title') OR $errors->get('slug'))
@@ -37,7 +37,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="code_number" class="col-form-label">Nomor Peraturan</label>
+                <label for="code_number" class="col-form-label">Nomor Peraturan <span class="text-danger">*</span></label>
                 <input type="text" name="code_number" id="code_number" class="form-control @error('code_number') is-invalid @enderror" value="{{ old('code_number', empty($law) ? null : $law->code_number) }}">
                 <div class="form-text text-muted">Kombinasi nomor dan kode peraturan. Contoh: 136/11/HK/2021.</div>
                 @error('code_number')
@@ -46,7 +46,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="number" class="col-form-label">Nomor Urut Peraturan</label>
+                <label for="number" class="col-form-label">Nomor Urut Peraturan <span class="text-danger">*</span></label>
                 <input type="number" name="number" id="number" class="form-control @error('number') is-invalid @enderror" value="{{ old('number', empty($law) ? null : $law->number) }}">
                 <div class="form-text text-muted">Indeks nomor urutan peraturan yang dipakai. Contoh: 12.</div>
                 @error('number')
@@ -55,7 +55,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="year" class="col-form-label">Tahun Terbit</label>
+                <label for="year" class="col-form-label">Tahun Terbit <span class="text-danger">*</span></label>
                 <input type="number" name="year" id="year" class="form-control @error('year') is-invalid @enderror" value="{{ old('year', empty($law) ? null : $law->year) }}">
                 <div class="form-text text-muted">Tahun diterbitkannya peraturan.</div>
                 @error('year')
@@ -64,7 +64,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="approved" class="col-form-label">Tgl. Penetapan</label>
+                <label for="approved" class="col-form-label">Tgl. Penetapan <span class="text-danger">*</span></label>
                 <div class="input-group">
                     <span class="input-group-text @error('approved') is-invalid @enderror"><i class="ph-calendar-blank"></i></span>
                     <input type="text" class="form-control daterange-single @error('approved') is-invalid @enderror" name="approved" value="{{ old('approved', empty($law) ? null : $law->approved) }}">
@@ -76,7 +76,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="published" class="col-lg-3 col-form-label">Tgl. Pengundangan</label>
+                <label for="published" class="col-lg-3 col-form-label">Tgl. Pengundangan <span class="text-danger">*</span></label>
                 <div class="input-group">
                     <span class="input-group-text @error('published') is-invalid @enderror"><i class="ph-calendar-blank"></i></span>
                     <input type="text" class="form-control daterange-single @error('published') is-invalid @enderror" name="published" value="{{ old('published', empty($law) ? null : $law->published) }}">
@@ -89,7 +89,7 @@
 
             <div class="mb-3">
                 <label for="author" class="col-lg-3 col-form-label">T.E.U. Badan</label>
-                <input type="text" name="author" id="author" class="form-control @error('author') is-invalid @enderror" value="{{ old('author', empty($law) ? null : $law->author) }}">
+                <input type="text" name="author" id="author" class="form-control @error('author') is-invalid @enderror" value="{{ old('author', empty($law) ? 'Langkat (Kabupaten)' : $law->author) }}">
                 <div class="form-text text-muted">Tajuk Entri Utama (T.E.U.) adalah lembaga yang bertanggung jawab atas isi peraturan. Contoh: Langkat (Kabupaten).</div>
                 @error('author')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -107,7 +107,7 @@
 
             <div class="mb-3">
                 <label for="place" class="col-form-label">Tempat Terbit</label>
-                <input type="text" name="place" id="place" class="form-control @error('place') is-invalid @enderror" value="{{ old('place', empty($law) ? null : $law->place) }}">
+                <input type="text" name="place" id="place" class="form-control @error('place') is-invalid @enderror" value="{{ old('place', empty($law) ? 'Langkat' : $law->place) }}">
                 <div class="form-text text-muted">Tempat ditetapkan peraturan, biasanya tercantum di bagian penutup. Contoh: Langkat.</div>
                 @error('place')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -157,7 +157,7 @@
 
             <div class="mb-3">
                 <label for="language" class="col-form-label">Bahasa</label>
-                <input type="text" name="language" id="language" class="form-control @error('language') is-invalid @enderror" value="{{ old('language', empty($law) ? null : $law->language) }}">
+                <input type="text" name="language" id="language" class="form-control @error('language') is-invalid @enderror" value="{{ old('language', empty($law) ? 'Indonesia' : $law->language) }}">
                 <div class="form-text text-muted">Bahasa yang digunakan oleh dokumen. Contoh: Indonesia.</div>
                 @error('language')
                     <div class="invalid-feedback">{{ $message }}</div>
@@ -166,7 +166,7 @@
 
             <div class="mb-3">
                 <label for="location" class="col-form-label">Lokasi</label>
-                <input type="text" name="location" id="location" class="form-control @error('location') is-invalid @enderror" value="{{ old('location', empty($law) ? null : $law->location) }}">
+                <input type="text" name="location" id="location" class="form-control @error('location') is-invalid @enderror" value="{{ old('location', empty($law) ? 'Sekretariat DPRD Kab. Langkat' : $law->location) }}">
                 <div class="form-text text-muted">Tempat fisik peraturan disimpan. Contoh: Bagian Hukum Setda Kab. Langkat.</div>
                 @error('location')
                     <div class="invalid-feedback">{{ $message }}</div>

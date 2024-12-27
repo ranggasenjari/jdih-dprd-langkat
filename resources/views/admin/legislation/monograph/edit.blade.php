@@ -28,7 +28,7 @@
                             <div class="col-lg-8 offset-lg-2">
 
                                 <div class="mb-3">
-                                    <label class="col-form-label" for="category_id">Jenis Monografi</label>
+                                    <label class="col-form-label" for="category_id">Jenis Monografi <span class="text-danger">*</span></label>
                                     <select name="category_id" id="category_id" autofocus class="select @error('category_id') is-invalid @enderror">
                                         <option value="">Pilih Jenis</option>
                                         @foreach ($categories as $key => $value)
@@ -41,7 +41,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label class="col-form-label" for="title">Judul:</label>
+                                    <label class="col-form-label" for="title">Judul <span class="text-danger">*</span>:</label>
                                     <textarea name="title" id="title" rows="4" spellcheck="false" class="form-control @if ($errors->get('title') OR $errors->get('slug')) is-invalid @endif">{{ $monograph->title }}</textarea>
                                     <div class="form-text text-muted">Format penulisan: Huruf kapital hanya diawal judul, selebihnya huruf kecil. Contoh: Pengantar hukum adat melayu.</div>
                                     @if ($errors->get('title') OR $errors->get('slug'))
@@ -57,7 +57,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="year" class="col-form-label">Tahun Terbit</label>
+                                    <label for="year" class="col-form-label">Tahun Terbit <span class="text-danger">*</span></label>
                                     <input type="number" name="year" id="year" class="form-control @error('year') is-invalid @enderror" value="{{ $monograph->year }}">
                                     <div class="form-text text-muted">Tahun diterbitkannya monografi.</div>
                                     @error('year')
@@ -84,7 +84,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="place" class="col-form-label">Tempat Terbit</label>
+                                    <label for="place" class="col-form-label">Tempat Terbit <span class="text-danger">*</span></label>
                                     <input type="text" name="place" id="place" class="form-control @error('place') is-invalid @enderror" value="{{ $monograph->place }}">
                                     <div class="form-text text-muted">Contoh: Langkat.</div>
                                     @error('place')
@@ -93,7 +93,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="publisher" class="col-form-label">Penerbit</label>
+                                    <label for="publisher" class="col-form-label">Penerbit <span class="text-danger">*</span></label>
                                     <input type="text" name="publisher" id="publisher" class="form-control @error('publisher') is-invalid @enderror" value="{{ $monograph->publisher }}">
                                     <div class="form-text text-muted">Contoh: CV. Balemedia.</div>
                                     @error('publisher')
@@ -111,7 +111,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="field_id" class="col-form-label">Bidang Hukum</label>
+                                    <label for="field_id" class="col-form-label">Bidang Hukum <span class="text-danger">*</span></label>
                                     <div id="field-options" class="@error('field_id') is-invalid @enderror">
                                         <select name="field_id" id="field_id" class="select-search">
                                             <option value="">Pilih Bidang Hukum</option>
@@ -165,7 +165,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="author" class="col-form-label">T.E.U. Orang/Badan</label>
+                                    <label for="author" class="col-form-label">T.E.U. Orang/Badan <span class="text-danger">*</span></label>
                                     <input type="text" name="author" id="author" class="form-control @error('author') is-invalid @enderror" value="{{ $monograph->author }}">
                                     <div class="form-text text-muted">Format penulisan: Nama pengarang (tanpa gelar dan dibalik). Contoh: THAMRIN, HUSNI.</div>
                                     @error('author')
@@ -174,7 +174,7 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="subject" class="col-form-label">Subjek</label>
+                                    <label for="subject" class="col-form-label">Subjek <span class="text-danger">*</span></label>
                                     <input type="text" name="subject" id="subject" class="form-control @error('subject') is-invalid @enderror" value="{{ $monograph->subject }}">
                                     <div class="form-text text-muted">Format penulisan: Topik/kata kunci dari isi monografi (ditulis dengan huruf Kapital). Contoh: HUKUM ADAT.</div>
                                     @error('subject')

@@ -1,12 +1,12 @@
 {
     "icons": [
       {
-        "src": "/android-chrome-192x192.png",
+        "src": "/assets/admin/favicon/android-chrome-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "/android-chrome-512x512.png",
+        "src": "/assets/admin/favicon/android-chrome-512x512.png",
         "sizes": "512x512",
         "type": "image/png"
       }
@@ -15,7 +15,7 @@
     "background_color": "#ffffff",
     "display": "standalone",
     "name": "JDIH DPRD Kab. Langkat",
-    "short_name": "JDIH DPRD",
+    "short_name": "JDIH DPRD Langkat",
     "description": "JDIH DPRD Kabupaten Langkat",
     "start_url": "https://jdih-dprd.langkatkab.go.id/",
     "lang": "id",

@@ -28,11 +28,6 @@
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
-    <script>
-        if (typeof navigator.serviceWorker !== 'undefined') {
-            navigator.serviceWorker.register("{{ asset('assets/admin/js/pwabuilder-sw.js') }}")
-        }
-    </script>
 	<script src="{{ asset('assets/jdih/demo/demo_configurator.js') }}"></script>
 	<script src="{{ asset('assets/jdih/js/bootstrap/bootstrap.bundle.min.js') }}"></script>
 	<script src="{{ asset('assets/jdih/js/jquery/jquery.min.js') }}"></script>

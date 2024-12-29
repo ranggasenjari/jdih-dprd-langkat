@@ -242,6 +242,11 @@
 <!-- /popup banner modal -->
 
 <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+        navigator.serviceWorker.register("{{ asset('assets/admin/js/pwabuilder-sw.js') }}")
+    }
+</script>
+<script>
     const el = document.getElementById('popup-banner');
     if (el) {
         const popupBanner = new bootstrap.Modal(document.getElementById('popup-banner'), {});

@@ -1,92 +1,100 @@
 {
-    "icons": [
-      {
-        "src": "/assets/admin/favicon/android-chrome-192-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "/assets/admin/favicon/android-chrome-512-512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      },
-      {
-        "src": "/assets/admin/favicon/android-launchericon-48-48.png",
-        "sizes": "48x48",
-        "type": "image/png"
-      },
-      {
-        "src": "/assets/admin/favicon/android-launchericon-72-72.png",
-        "sizes": "72x72",
-        "type": "image/png"
-      },
-      {
-        "src": "/assets/admin/favicon/android-launchericon-96-96.png",
-        "sizes": "96x96",
-        "type": "image/png"
-      },
-      {
-        "src": "/assets/admin/favicon/android-launchericon-144-144.png",
-        "sizes": "144x144",
-        "type": "image/png"
-      },
-      {
-        "src": "/assets/admin/favicon/android-launchericon-192-192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "/assets/admin/favicon/android-launchericon-512-512.png",
-        "sizes": "512x512",
-        "type": "image/png"
-      }
-    ],
-    "screenshots" : [
-      {
-        "src": "/assets/admin/images/screenshots/1.jpg",
-        "sizes": "2400x1080",
-        "type": "image/jpg",
-        "label": "home"
-      },
-      {
-        "src": "/assets/admin/images/screenshots/2.jpg",
-        "sizes": "2400x1080",
-        "type": "image/jpg",
-        "label": "banner"
-      },
-      {
-        "src": "/assets/admin/images/screenshots/3.jpg",
-        "sizes": "2400x1080",
-        "type": "image/jpg",
-        "label": "list"
-      },
-      {
-        "src": "/assets/admin/images/screenshots/4.jpg",
-        "sizes": "2400x1080",
-        "type": "image/jpg",
-        "label": "metadata"
-      },
-      {
-        "src": "/assets/admin/images/screenshots/5.jpg",
-        "sizes": "2400x1080",
-        "type": "image/jpg",
-        "label": "footer"
-      }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone",
-    "name": "JDIH DPRD Kab. Langkat",
-    "short_name": "JDIH DPRD Langkat",
-    "description": "JDIH DPRD Kabupaten Langkat",
-    "start_url": "https://jdih-dprd.langkatkab.go.id",
-    "scope": "https://jdih-dprd.langkatkab.go.id",
-    "lang": "id",
-    "orientation": "portrait",
-    "categories": [
-      "education",
-      "government",
-      "productivity",
-      "utilities"
-    ]
-  }
+  "icons": [
+    {
+      "src": "/assets/admin/favicon/android-chrome-192-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/admin/favicon/android-chrome-512-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/admin/favicon/android-launchericon-48-48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/admin/favicon/android-launchericon-72-72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/admin/favicon/android-launchericon-96-96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/admin/favicon/android-launchericon-144-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/admin/favicon/android-launchericon-192-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/admin/favicon/android-launchericon-512-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/admin/images/screenshots/1.jpg",
+      "sizes": "2400x1080",
+      "type": "image/jpg",
+      "label": "home"
+    },
+    {
+      "src": "/assets/admin/images/screenshots/2.jpg",
+      "sizes": "2400x1080",
+      "type": "image/jpg",
+      "label": "banner"
+    },
+    {
+      "src": "/assets/admin/images/screenshots/3.jpg",
+      "sizes": "2400x1080",
+      "type": "image/jpg",
+      "label": "list"
+    },
+    {
+      "src": "/assets/admin/images/screenshots/4.jpg",
+      "sizes": "2400x1080",
+      "type": "image/jpg",
+      "label": "metadata"
+    },
+    {
+      "src": "/assets/admin/images/screenshots/5.jpg",
+      "sizes": "2400x1080",
+      "type": "image/jpg",
+      "label": "footer"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "name": "JDIH DPRD Kab. Langkat",
+  "short_name": "JDIH DPRD Langkat",
+  "description": "JDIH DPRD Kabupaten Langkat",
+  "start_url": "https://jdih-dprd.langkatkab.go.id",
+  "scope": "https://jdih-dprd.langkatkab.go.id",
+  "lang": "id",
+  "orientation": "portrait",
+  "categories": [
+    "education",
+    "government",
+    "productivity",
+    "utilities"
+  ],
+  "id": "jdih",
+  "dir": "ltr",
+  "display_override": [
+    "standalone",
+    "fullscreen",
+    "window-controls-overlay"
+  ],
+  "prefer_related_applications": false
+}

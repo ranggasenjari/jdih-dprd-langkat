@@ -353,7 +353,7 @@
                 <div class="col-xl-10 offset-xl-1">
                     <div class="d-flex mb-4 pb-2">
                         <h2 class="fw-bold me-xl-auto section-title mb-0">Statistik Peraturan</h2>
-                        <a href="#" class="btn btn-dark lift px-3 fw-semibold">Lihat Statistik lainnya<i class="ph-arrow-right ms-2"></i></a>
+                        <!--<a href="#" class="btn btn-dark lift px-3 fw-semibold">Lihat Statistik lainnya<i class="ph-arrow-right ms-2"></i></a>-->
                     </div>
                     <div class="card card-body shadow rounded-lg">
                         <div class="chart-container">

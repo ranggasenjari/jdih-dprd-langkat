@@ -517,9 +517,9 @@
                         <div class="col-xl-3 m-auto">
                             <h3 class="display-8 fw-bold">Struktur Pengelola {!! $appName !!}</h3>
                             <p class="fs-lg mb-3"></p>
-                            <button type="button" class="btn btn-lg btn-danger lift px-3 fw-semibold mb-3">
+                            <!--<button type="button" class="btn btn-lg btn-danger lift px-3 fw-semibold mb-3">
                                 Lihat Semua Pengelola<i class="ph-arrow-right ms-2"></i>
-                            </button>
+                            </button>-->
                         </div>
                         <div class="col-xl-9">
                             <div id="member-slider" class="row gx-2">

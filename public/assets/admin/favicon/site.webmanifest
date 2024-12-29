@@ -48,6 +48,7 @@
     "short_name": "JDIH DPRD Langkat",
     "description": "JDIH DPRD Kabupaten Langkat",
     "start_url": "https://jdih-dprd.langkatkab.go.id/",
+    "scope": "https://jdih-dprd.langkatkab.go.id",
     "lang": "id",
     "orientation": "portrait",
     "categories": [

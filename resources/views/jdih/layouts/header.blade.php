@@ -17,9 +17,9 @@
                 </a>
             </h1>
 
-            <a href="#page_header" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse" data-color-theme="dark">
+            <!--<a href="#page_header" class="btn btn-light align-self-center collapsed d-lg-none border-transparent rounded-pill p-0 ms-auto" data-bs-toggle="collapse" data-color-theme="dark">
                 <i class="ph-caret-down collapsible-indicator ph-sm m-1"></i>
-            </a>
+            </a>-->
         </div>
 
         <div class="collapse d-lg-block my-lg-auto ms-lg-auto" id="ph_text_input_right_icon">

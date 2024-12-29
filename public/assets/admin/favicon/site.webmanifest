@@ -41,13 +41,45 @@
         "type": "image/png"
       }
     ],
+    "screenshots" : [
+      {
+        "src": "/assets/admin/images/screenshots/1.jpg",
+        "sizes": "2400x1080",
+        "type": "image/jpg",
+        "label": "home"
+      },
+      {
+        "src": "/assets/admin/images/screenshots/2.jpg",
+        "sizes": "2400x1080",
+        "type": "image/jpg",
+        "label": "banner"
+      },
+      {
+        "src": "/assets/admin/images/screenshots/3.jpg",
+        "sizes": "2400x1080",
+        "type": "image/jpg",
+        "label": "list"
+      },
+      {
+        "src": "/assets/admin/images/screenshots/4.jpg",
+        "sizes": "2400x1080",
+        "type": "image/jpg",
+        "label": "metadata"
+      },
+      {
+        "src": "/assets/admin/images/screenshots/5.jpg",
+        "sizes": "2400x1080",
+        "type": "image/jpg",
+        "label": "footer"
+      }
+    ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",
     "name": "JDIH DPRD Kab. Langkat",
     "short_name": "JDIH DPRD Langkat",
     "description": "JDIH DPRD Kabupaten Langkat",
-    "start_url": "https://jdih-dprd.langkatkab.go.id/",
+    "start_url": "https://jdih-dprd.langkatkab.go.id",
     "scope": "https://jdih-dprd.langkatkab.go.id",
     "lang": "id",
     "orientation": "portrait",

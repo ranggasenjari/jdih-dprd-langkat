@@ -2,11 +2,11 @@
 <div class="navbar navbar-sm navbar-dark navbar-static navbar-expand-lg py-1">
     <div class="container jusitfy-content-start px-lg-3">
 
-        <div class="d-flex d-lg-none me-2">
+        <!--<div class="d-flex d-lg-none me-2">
             <button type="button" class="navbar-toggler sidebar-mobile-main-toggle rounded-pill">
                 <i class="ph-list"></i>
             </button>
-        </div>
+        </div>-->
 
         <div class="navbar-brand flex-1 flex-lg-0">
             <a href="{{ $appUrl }}" class="d-inline-flex align-items-center">

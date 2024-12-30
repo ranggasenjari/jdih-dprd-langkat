@@ -1,14 +1,15 @@
 [
-    {
-      "relation": [
-        "delegate_permission/common.handle_all_urls",
-        "delegate_permission/common.get_login_creds"
-      ],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "id.go.langkatkab.jdih_dprd.twa",
-        "sha256_cert_fingerprints":
-          ["5C:F0:48:17:F3:A5:C7:D5:76:80:36:AD:F9:E4:F8:C8:AD:18:1D:03:73:1E:90:A4:F4:CE:5F:6A:E0:7D:F8:1A"]
-      }
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "id.go.langkatkab.jdih_dprd.twa",
+      "sha256_cert_fingerprints": [
+        "5C:F0:48:17:F3:A5:C7:D5:76:80:36:AD:F9:E4:F8:C8:AD:18:1D:03:73:1E:90:A4:F4:CE:5F:6A:E0:7D:F8:1A"
+      ]
     }
-  ]
+  }
+]

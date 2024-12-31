@@ -11,7 +11,8 @@
 	<title>@yield('title', strip_tags($appName))</title>
 
 	<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/admin/favicon/apple-touch-icon.png') }}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/admin/favicon/favicon-32x32.png') }}">
+	<link rel="apple-touch-startup-image" media="(device-width: 1080px) and (device-height: 1920px) and (-webkit-device-pixel-ratio: 3)" href="{{ asset('assets/admin/favicon/apple-launch-1080x1920.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/admin/favicon/favicon-32x32.png') }}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/admin/favicon/favicon-16x16.png') }}">
 	<link rel="manifest" href="{{ asset('assets/admin/favicon/site.webmanifest') }}">
 

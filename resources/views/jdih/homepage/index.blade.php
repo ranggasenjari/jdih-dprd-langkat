@@ -443,7 +443,7 @@
 @endif
 
 <!-- FAQ -->
-<section class="bg-dark">
+<!-- <section class="bg-dark">
     <div class="container py-5">
         <div class="content-wrapper">
             <div class="content py-4">
@@ -453,57 +453,14 @@
                             <iframe src="https://www.youtube.com/embed/Y5ZlcHiGthw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-7 text-light">
-                        <span class="d-block display-7 fw-bold mb-4">Pertanyaan yang sering diajukan</span>
-                        <div class="card shadow">
-                            <div class="card-header border-bottom-0 bg-dark bg-opacity-85">
-                                <h6 class="mb-0">
-                                    <a data-bs-toggle="collapse" class="link-light" href="#collapsible-card1"><i class="ph-question me-2"></i>Collapsible card #1</a>
-                                </h6>
-                            </div>
-
-                            <div id="collapsible-card1" class="collapse show">
-                                <div class="card-body bg-dark bg-opacity-85 pt-0">
-                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card shadow">
-                            <div class="card-header border-bottom-0 bg-dark bg-opacity-85">
-                                <h6 class="mb-0">
-                                    <a class="collapsed link-light" data-bs-toggle="collapse" href="#collapsible-card2"><i class="ph-question me-2"></i>Collapsible card #2</a>
-                                </h6>
-                            </div>
-
-                            <div id="collapsible-card2" class="collapse">
-                                <div class="card-body bg-dark bg-opacity-85 pt-0">
-                                    Тon cupidatat skateboard dolor brunch. Тesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card shadow">
-                            <div class="card-header border-bottom-0 bg-dark bg-opacity-85">
-                                <h6 class="mb-0">
-                                    <a class="collapsed link-light" data-bs-toggle="collapse" href="#collapsible-card3"><i class="ph-question me-2"></i>Collapsible card #3</a>
-                                </h6>
-                            </div>
-
-                            <div id="collapsible-card3" class="collapse">
-                                <div class="card-body bg-dark bg-opacity-85 pt-0">
-                                    3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it.
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="#" class="btn btn-outline-danger lift px-3 me-3 mt-2 fw-semibold">Lihat Pertanyaan lainnya<i class="ph-arrow-right ms-2"></i></a>
-                    </div> -->
+                    <div class="col-xl-7 text-light">
+                        
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- /faq -->
 
 <!-- Affiliate Apps -->

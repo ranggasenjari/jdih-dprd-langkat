@@ -272,7 +272,7 @@
     <section class="bg-dark overlay position-relative">
         <div class="div" style="background-image: url({{ asset('assets/jdih/images/backgrounds/bg.jpg') }}); background-position:center; background-repeat:no-repeat">
             <div class="container py-5" style="z-index: 2; position: relative;">
-                <div class="content-wrapper">
+                <div class="content-wrapper " style="line-height:1.2;">
                     <div class="content row py-3 gx-5">
                         <div class="col-xl-4 px-5">
                             @isset($cover)

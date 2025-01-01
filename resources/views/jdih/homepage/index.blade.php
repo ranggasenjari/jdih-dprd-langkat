@@ -273,7 +273,7 @@
         <div class="div" style="background-image: url({{ asset('assets/jdih/images/backgrounds/bg.jpg') }}); background-position:center; background-repeat:no-repeat">
             <div class="container py-5" style="z-index: 2; position: relative;">
                 <div class="content-wrapper">
-                    <div class="content row py-5 gx-5">
+                    <div class="content row py-3 gx-5">
                         <div class="col-xl-4 px-5">
                             @isset($cover)
                                 <img src="{{ $cover->media->source }}" class="img-fluid mx-auto d-block rounded">
@@ -281,9 +281,9 @@
                                 <img src="{{ asset('assets/admin/images/placeholders/placeholder.jpg') }}" class="img-fluid rounded">
                             @endisset
                         </div>
-                        <div class="col-xl-8 text-light">
+                        <div class="col-xl-8 text-light mt-3">
                             <h3 class="fw-bold text-danger"><a href="{{ route('legislation.monograph.index') }}" class="link-danger">Monografi Hukum</a></h3>
-                            <a href="{{ route('legislation.monograph.show', ['category' => $monograph->category->slug, 'legislation' => $monograph->slug]) }}" class="d-block display-7 fw-bold link-light mb-4">{{ $monograph->title }}</a>
+                            <a href="{{ route('legislation.monograph.show', ['category' => $monograph->category->slug, 'legislation' => $monograph->slug]) }}" class="d-block fs-2 fw-bold link-light mb-4">{{ $monograph->title }}</a>
                             <div class="fs-lg">
 
                                 <div class="d-flex mb-3">
@@ -293,7 +293,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-fill">
-                                        <h4 class="mb-1 fw-bold">T.E.U. Badan/Pengarang</h4>
+                                        <h5 class="mb-1 fw-bold">T.E.U. Badan/Pengarang</h5>
                                         <p class="mb-0">{{ $monograph->author }}</p>
                                     </div>
                                 </div>
@@ -305,11 +305,11 @@
                                     </div>
                                     <div class="row flex-fill">
                                         <div class="col-6">
-                                            <h4 class="mb-1 fw-bold">Subjek</h4>
+                                            <h5 class="mb-1 fw-bold">Subjek</h5>
                                             <p class="mb-0">{{ $monograph->subject }}</p>
                                         </div>
                                         <div class="col-6">
-                                            <h4 class="mb-1 fw-bold">Penerbit</h4>
+                                            <h5 class="mb-1 fw-bold">Penerbit</h5>
                                             <p class="mb-0">{{ $monograph->publisher }}</p>
                                         </div>
                                     </div>
@@ -322,11 +322,11 @@
                                     </div>
                                     <div class="row flex-fill">
                                         <div class="col-6">
-                                            <h4 class="mb-1 fw-bold">Tempat Terbit</h4>
+                                            <h5 class="mb-1 fw-bold">Tempat Terbit</h5>
                                             <p class="mb-0">{{ $monograph->place }}</p>
                                         </div>
                                         <div class="col-6">
-                                            <h4 class="mb-1 fw-bold">Tahun Terbit</h4>
+                                            <h5 class="mb-1 fw-bold">Tahun Terbit</h5>
                                             <p class="mb-0">{{ $monograph->year }}</p>
                                         </div>
                                     </div>
@@ -610,7 +610,7 @@
                     <div id="banner-slider" class="row gx-5">
                         @foreach ($banners as $banner)
                             <div class="col-xl-3">
-                                <div class="card">
+                                <div class="card text-center">
                                     <a href="{{ $banner->url }}"><img class="rounded img-fluid" src="{{ $banner->image->source }}" alt="" srcset=""></a>
                                 </div>
                             </div>

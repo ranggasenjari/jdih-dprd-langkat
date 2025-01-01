@@ -10,6 +10,9 @@
                             <h4 class="fw-bold mb-0">{!! $appName !!}</h4>
                         </div>
                         {!! $welcome->excerpt !!}
+                        <a href="https://play.google.com/store/apps/details?id=id.go.langkatkab.jdih_dprd.twa" target="_blank">
+                        <img width="230" class="rounded img-fluid mt-2" src="{{ asset('assets/admin/images/logo-playstore.png') }}">
+                        </a>
                     </div>
                     <div class="col-lg-2">
                         <h4 class="fw-bold">Navigasi</h4>

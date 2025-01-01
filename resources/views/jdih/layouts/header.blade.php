@@ -3,7 +3,7 @@
     <div class="page-header-content container d-lg-flex">
         <div class="d-flex">
             <div class="d-flex flex-column flex-md-row flex-sm-row align-items-center">
-                <a href="{{ $jdihnUrl }}" class="me-3" style="align-self: center;">
+                <a href="{{ $jdihnUrl }}" class="me-3 mt-2" style="align-self: center;">
                     <img src="{{ $jdihnLogo }}" alt="{{ $jdihnTitle }}" width="64">
                 </a>
 

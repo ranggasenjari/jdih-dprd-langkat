@@ -34,7 +34,7 @@
             "loop": true,
             "responsive": {
                 "350": {
-                "items": 3
+                "items": 1
                 },
                 "500": {
                 "items": 4
@@ -50,11 +50,14 @@
         const memberSlider = tns({
             "container": "#member-slider",
             "loop": true,
-            @if($isMobile)
-            "items": 2,
-            @else
-            "items": 4,
-            @endif
+            "responsive": {
+                "350": {
+                "items": 2
+                },
+                "500": {
+                "items": 4
+                }
+            },
             "gutter": 20,
             "controls": false,
             "mouseDrag": true,

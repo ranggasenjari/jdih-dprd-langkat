@@ -8,7 +8,7 @@
                 </a>
 
                 <a href="{{ $appUrl }}" class="me-3" style="align-self: center;">
-                    <img class="rounded" src="{{ $appLogoUrl }}" alt="{{ $appName }}" width="64">
+                    <img class="rounded" src="{{ $appLogoUrl }}" alt="{{ $appName }}" width="58">
                 </a>
             </div>
 

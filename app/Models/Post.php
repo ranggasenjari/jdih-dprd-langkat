@@ -39,7 +39,8 @@ class Post extends Model
 
     public function author(): BelongsTo
     {
-        return $this->belongsTo(Employee::class);
+        // return $this->belongsTo(Employee::class);
+        return $this->belongsTo(User::class);
     }
 
     public function taxonomy(): BelongsTo

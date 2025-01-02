@@ -51,19 +51,6 @@
                                     @enderror
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="author" class="col-form-label">Penulis:</label>
-                                    <select id="author_id" name="author_id" class="select @error('author_id') is-invalid @enderror">
-                                        <option value="">Pilih Penulis</option>
-                                        @foreach ($authors as $key => $value)
-                                            <option value="{{ $key }}">{{ $value }}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('author_id')
-                                        <div class="invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-
                             </div>
                         </div>
 

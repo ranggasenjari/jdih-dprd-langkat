@@ -124,7 +124,7 @@
                                 <td>{{ $post->taxonomy->name ?? '-'; }}</td>
                                 <td class="text-center"><span class="badge bg-info bg-opacity-20 text-info rounded-pill">{{ $post->view; }}</span></td>
                                 <td class="text-center">
-                                    <img src="{{ $post->userPictureUrl($post->author->picture, $post->author->name) }}" alt="{{ $post->author->name }}" class="rounded-circle" width="32" height="32" data-bs-popup="tooltip" title="{{ $post->author->name }}">
+                                    <img src="{{ $post->userPictureUrl($post->user->picture, $post->user->name) }}" alt="{{ $post->user->name }}" class="rounded-circle" width="32" height="32" data-bs-popup="tooltip" title="{{ $post->user->name }}">
                                 </td>
                                 <td>
                                     <span class="d-block">{!! $post->publicationLabel() !!}</span>

@@ -124,7 +124,6 @@ class PageController extends AdminController
         
         $type = TaxonomyType::PAGE;
         $taxonomies = Taxonomy::type($type)->sorted()->pluck('name', 'id');
-        $authors = Employee::sorted()->pluck('name', 'id');
 
         $vendors = [
             'assets/admin/js/vendor/forms/selects/select2.min.js',
@@ -139,7 +138,6 @@ class PageController extends AdminController
             'breadCrumbs',
             'type',
             'taxonomies',
-            'authors',
             'vendors',
         ));
     }
@@ -251,7 +249,6 @@ class PageController extends AdminController
 
         $type = TaxonomyType::PAGE;
         $taxonomies = Taxonomy::type($type)->sorted()->pluck('name', 'id');
-        $authors = Employee::sorted()->pluck('name', 'id');
 
         $vendors = [
             'assets/admin/js/vendor/forms/selects/select2.min.js',
@@ -267,7 +264,6 @@ class PageController extends AdminController
             'breadCrumbs',
             'type',
             'taxonomies',
-            'authors',
             'page',
             'vendors',
         ));
@@ -327,10 +323,6 @@ class PageController extends AdminController
                     break;
                 case 'taxonomy':
                     $page->taxonomy_id = $request->val;
-                    $page->save();
-                    break;
-                case 'author':
-                    $page->author_id = $request->val != 'null' ? $request->val : null;
                     $page->save();
                     break;
                 case 'trash':

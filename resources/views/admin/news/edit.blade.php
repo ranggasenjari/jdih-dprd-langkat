@@ -118,7 +118,7 @@
                                     </tr>
                                     <tr>
                                         <td class="text-nowrap"><i class="ph-user me-2"></i>Penulis:</td>
-                                        <td class="text-end">{{ $news->author->name }}</td>
+                                        <td class="text-end">{{ $news->user->name }}</td>
                                     </tr>
                                     <tr>
                                         <td class="text-nowrap"><i class="ph-calendar-blank me-2"></i>Posting:</td>

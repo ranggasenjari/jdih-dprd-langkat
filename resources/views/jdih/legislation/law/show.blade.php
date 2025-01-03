@@ -421,7 +421,7 @@
                                             <span class="badge bg-danger bg-opacity-10 text-danger rounded-pill mb-2">{{ $law->category->name }}</span>
                                             <h4 class="fw-bold mb-0">{{ $law->shortTitle }}</h4>
                                         </div>
-                                        <div class="card-body fs-lg pb-0">
+                                        <div class="card-body fs-md pb-0">
                                             <p class="mb-0 text-body">{{ $law->title }}</p>
                                         </div>
                                     </a>

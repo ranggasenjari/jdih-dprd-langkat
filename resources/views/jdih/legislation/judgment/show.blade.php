@@ -258,7 +258,7 @@
                                             <img class="card-img-top img-fluid" src="{{ $judgment->coverSource }}" alt="">
                                         </div>
 
-                                        <div class="card-body fs-lg pb-0">
+                                        <div class="card-body fs-md pb-0">
                                             <p class="mb-0 text-body">{{ $judgment->title }}</p>
                                         </div>
                                     </a>

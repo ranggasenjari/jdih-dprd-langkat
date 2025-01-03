@@ -269,7 +269,7 @@
                                             <img class="card-img-top img-fluid h-450 object-fit-cover" src="{{ $monograph->coverSource }}" alt="{{ $monograph->title }}">
                                         </div>
 
-                                        <div class="card-body fs-lg pb-0">
+                                        <div class="card-body fs-md pb-0">
                                             <p class="mb-0 text-body">{{ $monograph->title }}</p>
                                         </div>
                                     </a>

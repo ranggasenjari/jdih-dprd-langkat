@@ -26,7 +26,7 @@
             <div class="collapse show" id="sidebar-search">
                 <div class="sidebar-section-body">
                     <div class="form-control-feedback form-control-feedback-end">
-                        <input id="title" type="search" name="title" autofocus class="form-control form-control-danger" placeholder="Contoh: covid-19" value="{{ Request::get('title') }}">
+                        <input id="title" type="search" name="title" autofocus class="form-control form-control-danger" placeholder="Contoh: Pembentukan fraksi" value="{{ Request::get('title') }}">
                         <div class="form-control-feedback-icon">
                             <i class="ph-magnifying-glass opacity-50"></i>
                         </div>

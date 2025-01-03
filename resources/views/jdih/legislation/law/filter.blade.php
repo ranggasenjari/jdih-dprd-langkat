@@ -26,7 +26,7 @@
             <div class="collapse show" id="sidebar-search">
                 <div class="sidebar-section-body">
                     <div class="form-control-feedback form-control-feedback-end">
-                        <input id="title" type="search" name="title" autofocus class="form-control form-control-danger" placeholder="Contoh: covid-19" value="{{ Request::get('title') }}">
+                        <input id="title" type="search" name="title" autofocus class="form-control form-control-danger" placeholder="Contoh: Pembentukan fraksi" value="{{ Request::get('title') }}">
                         <div class="form-control-feedback-icon">
                             <i class="ph-magnifying-glass opacity-50"></i>
                         </div>
@@ -136,14 +136,14 @@
                     <div class="mb-3">
                         <label class="form-label">Ditetapkan:</label>
                         <div class="input-group">
-                            <input type="text" name="rgapproved" class="form-control daterange-datemenu" placeholder="08/03/2023" value="{{ Request::get('rgapproved') }}">
+                            <input type="text" name="rgapproved" class="form-control daterange-datemenu" placeholder="31/12/2024 - 31/01/2025" value="{{ Request::get('rgapproved') }}">
                             <span class="input-group-text"><i class="ph-calendar"></i></span>
                         </div>
                     </div>
 
                     <label class="form-label">Diundangkan:</label>
                     <div class="input-group">
-                        <input type="text" name="rgpublished" class="form-control daterange-datemenu" placeholder="08/03/2023" value="{{ Request::get('rgpublished') }}">
+                        <input type="text" name="rgpublished" class="form-control daterange-datemenu" placeholder="31/01/2025 - 20/02/2025" value="{{ Request::get('rgpublished') }}">
                         <span class="input-group-text"><i class="ph-calendar"></i></span>
                     </div>
                 </div>

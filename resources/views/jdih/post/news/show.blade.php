@@ -40,7 +40,7 @@
                         <ul class="post-meta list-inline list-inline-bullet text-muted">
                             <li class="list-inline-item"><i class="ph-clock me-2"></i>{{ $news->timeFormatted($news->published_at, "G:i") }} WIB</li>
                             <li class="list-inline-item"><i class="ph-calendar-blank me-2"></i>{{ $news->timeFormatted($news->published_at, "l, j F Y") }}</li>
-                            <li class="list-inline-item"><i class="ph-user me-2"></i>{{ $news->author->name }}</li>
+                            <li class="list-inline-item"><i class="ph-user me-2"></i>{{ $news->user->name }}</li>
                         </ul>
                     </div>
 

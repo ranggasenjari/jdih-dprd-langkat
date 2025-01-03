@@ -74,9 +74,17 @@
                             </div>
                         @endif
 
-                        @isset ($news->source)
-                            <p class="mt-4"><span class="fw-bold">Sumber: </span>{{ $news->source }}</p>
+                        @isset($news->source)
+                            <p class="mt-4">
+                                <span class="fw-bold">Sumber: </span>
+                                @if (Str::startsWith($news->source, ['http://', 'https://']))
+                                    <a href="{{ $news->source }}" target="_blank" rel="noopener noreferrer">{{ $news->source }}</a>
+                                @else
+                                    {{ $news->source }}
+                                @endif
+                            </p>
                         @endisset
+
                     </div>
                 </article>
 

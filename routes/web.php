@@ -11,6 +11,7 @@ use App\Http\Controllers\Jdih\Legislation\JudgmentController;
 use App\Http\Controllers\Jdih\Post\NewsController;
 use App\Http\Controllers\Jdih\Post\PageController;
 use App\Http\Controllers\Jdih\VoteController;
+use App\Http\Controllers\QrCodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,10 @@ use App\Http\Controllers\Jdih\VoteController;
 
 Route::get('/', HomepageController::class)
     ->name('homepage');
+
+Route::get('/generate-qr', function () {
+    return QrCodeController::generateQrCode(url()->current());
+});
 
 Route::post('/legislation/law-yearly-column-chart', [LegislationController::class, 'lawYearlyColumnChart']);
 

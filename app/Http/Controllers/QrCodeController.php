@@ -11,9 +11,9 @@ class QrCodeController extends Controller
     {
         $client = new Client();
 
-        $response = $client->post('https://qr.ranggasenjari.my.id/qr-code-generator', [
+        $response = $client->post(env('QR_URL', 'https://qr.ranggasenjari.my.id/qr-code-generator'), [
             'headers' => [
-                'Authorization' => 'Bearer a7d8d5479c9bad1538c160bad446e179',
+                'Authorization' => 'Bearer '.env('QR_TOKEN', 'xyz'),
             ],
             'multipart' => [
                 [

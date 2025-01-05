@@ -357,20 +357,24 @@
                 <div class="card shadow mb-4">
 
                     <div class="card-body">
-                    <div class="text-center pt-2">
-                        @php
-                            use App\Http\Controllers\QrCodeController;
-                            $qrCodeUrl = QrCodeController::generateQrCode(url()->current());
-                        @endphp
+                        <!-- <div class="text-center pt-2">
+                            {!! QrCode::size(180)->margin(2)->generate(url()->current()); !!}
+                            <p class="mb-0">Pindai kode QR</p>
+                        </div> -->
+                        <div class="text-center pt-2">
+                            @php
+                                use App\Http\Controllers\QrCodeController;
+                                $qrCodeUrl = QrCodeController::generateQrCode(url()->current());
+                            @endphp
 
-                        @if($qrCodeUrl)
-                            <img src="{{ $qrCodeUrl }}" alt="QR Code">
-                            <!-- <p class="mb-0">{{ $qrCodeUrl }}</p> -->
-                            <!-- <p class="mb-0">Pindai kode QR</p> -->
-                        @else
-                            <p>Gagal memuat QR Code.</p>
-                        @endif
-                    </div>
+                            @if($qrCodeUrl)
+                                <img src="{{ $qrCodeUrl }}" alt="QR Code">
+                                <!-- <p class="mb-0">{{ $qrCodeUrl }}</p> -->
+                                <!-- <p class="mb-0">Pindai kode QR</p> -->
+                            @else
+                                <p>Gagal memuat QR Code.</p>
+                            @endif
+                        </div>
                         <div class="mt-4">
                             @isset($legislation->masterDocumentSource)
                                 <form action="{{ route('legislation.download', $legislation->masterDocument()->id) }}" method="post">

@@ -38,11 +38,11 @@ class QrCodeController extends Controller
                 ],
                 [
                     'name'     => 'qr_code_logo',
-                    'contents' => Psr7\Utils::tryFopen('assets/admin/favicon/apple-touch-icon.png', 'r')
+                    'contents' => Psr7\Utils::tryFopen('assets/admin/images/logo_qr.png', 'r')
                 ],
                 [
                     'name' => 'qr_code_logo_size',
-                    'contents' => 25,
+                    'contents' => 29,
                 ],
                 [
                     'name' => 'outer_eye_style',

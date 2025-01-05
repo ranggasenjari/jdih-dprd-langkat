@@ -182,9 +182,23 @@
                     <img class="card-img-top img-fluid border-bottom" src="{{ $legislation->coverSource }}" alt="{{ $legislation->title }}">
 
                     <div class="card-body">
-                        <div class="text-center pt-2">
+                        <!-- <div class="text-center pt-2">
                             {!! QrCode::size(180)->margin(2)->generate(url()->current()); !!}
                             <p class="mb-0">Pindai kode QR</p>
+                        </div> -->
+                        <div class="text-center pt-2">
+                            @php
+                                use App\Http\Controllers\QrCodeController;
+                                $qrCodeUrl = QrCodeController::generateQrCode(url()->current());
+                            @endphp
+
+                            @if($qrCodeUrl)
+                                <img src="{{ $qrCodeUrl }}" alt="QR Code">
+                                <!-- <p class="mb-0">{{ $qrCodeUrl }}</p> -->
+                                <!-- <p class="mb-0">Pindai kode QR</p> -->
+                            @else
+                                <p>Gagal memuat QR Code.</p>
+                            @endif
                         </div>
                         @isset($legislation->masterDocumentSource)
                             <div class="mt-4">

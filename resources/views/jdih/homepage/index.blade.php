@@ -246,7 +246,7 @@
                         <div class="col-xl-4 my-2">
                             <div class="card lift shadow-sm h-100 border-0 rounded-lg">
                                 <a href="{{ route('legislation.law.show', ['category' => $law->category->slug, 'legislation' => $law->slug]) }}" class="text-decoration-none">
-                                    <div class="card-header bg-white border-0 pb-1">
+                                    <div class="card-header border-0 pb-1">
                                         <h5 class="fw-bold text-dark mb-1" style="max-width: 100%;">
                                             {{ Str::limit($law->shortTitle, 150, '...') }}
                                         </h5>
@@ -378,37 +378,6 @@
 </section>
 <!-- /legislation statistic -->
 
-<!-- Latest member's laws -->
-<!-- <section class="bg-dark bg-opacity-3">
-    <div class="container py-5">
-        <div class="content-wrapper">
-            <div class="content py-4">
-                <h2 class="fw-bold section-title text-center mb-4 pb-2">Produk Hukum anggota JDIH DPRD Kabupaten Langkat</h2>
-                <div class="row gx-4">
-                    @foreach ($latestLaws as $law)
-                        <div class="col-xl-4 my-3">
-                            <div class="card lift shadow h-100">
-                                <a href="#" class="text-body">
-                                    <div class="card-header border-0 pb-0">
-                                        <div class="d-flex mb-2">
-                                            <img src="{{ asset('assets/admin/images/demo/logos/1.svg') }}" alt="" srcset="" height="32" class="me-2">
-                                            <h5 class="fw-bold">JDIH Kota Denpasar</h5>
-                                        </div>
-                                        <h4 class="fw-bold mb-0">{{ $law->shortTitle }}</h4>
-                                    </div>
-                                    <div class="card-body fs-md pb-0">
-                                        <p class="mb-0 text-body">{{ $law->title }}</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- /latest member's laws -->
 
 @if(isset($latestNews) AND $latestNews->count() > 0)
     <!-- News -->
@@ -453,27 +422,6 @@
     <!-- /news -->
 @endif
 
-<!-- FAQ -->
-<!-- <section class="bg-dark">
-    <div class="container py-5">
-        <div class="content-wrapper">
-            <div class="content py-4">
-                <div class="row gx-5">
-                    <div class="col-xl-5">
-                        <div class="card card-body bg-dark shadow ratio ratio-16x9">
-                            <iframe src="https://www.youtube.com/embed/Y5ZlcHiGthw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 text-light">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- /faq -->
-
 <!-- Affiliate Apps -->
 <section class="bg-dark bg-opacity-3">
     <div class="container py-5">
@@ -485,9 +433,6 @@
                         <div class="col-xl-3 m-auto">
                             <h3 class="display-8 fw-bold">Struktur Pengelola {!! $appName !!}</h3>
                             <p class="fs-lg mb-3"></p>
-                            <!--<button type="button" class="btn btn-lg btn-danger lift px-3 fw-semibold mb-3">
-                                Lihat Semua Pengelola<i class="ph-arrow-right ms-2"></i>
-                            </button>-->
                         </div>
                         <div class="col-xl-9">
                             <div id="member-slider" class="row gx-2">
@@ -507,56 +452,6 @@
                         </div>
                     </div>
                 @endif
-
-                <!-- <h2 class="fw-bold section-title text-center mb-4 pb-2">Aplikasi Terkait JDIH</h2>
-                <div class="row gx-5">
-
-                    <div class="col-xl-4">
-                        <div class="card h-100 card-body shadow lift pb-0" style="min-height: 135px; background-image: url({{ asset('assets/jdih/images/backgrounds/panel_bg.png') }})">
-                            <a href="https://sipekenseni.baliprov.go.id" class="text-body">
-                                <div class="d-flex align-items-center">
-                                    <i class="ph-newspaper ph-3x text-danger me-3"></i>
-
-                                    <div class="flex-fill text-end">
-                                        <h3 class="mb-0 fw-bold">SI PEKEN SENI</h3>
-                                        <span class="d-block fs-lg">Sistem Penyusunan Keputusan Gubernur Secara Elektronik</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4">
-                        <div class="card h-100 card-body shadow lift pb-0" style="min-height: 135px; background-image: url({{ asset('assets/jdih/images/backgrounds/panel_bg.png') }})">
-                            <a href="https://fasperkadabkum.com" class="text-body">
-                                <div class="d-flex align-items-center">
-                                    <i class="ph-paper-plane-tilt ph-3x text-indigo me-3"></i>
-
-                                    <div class="flex-fill text-end">
-                                        <h3 class="mb-0 fw-bold">SI PENYU DEWI GITA</h3>
-                                        <span class="d-block fs-lg">Sistem Penyusunan Produk Hukum Daerah Berbasis Wilayah Dengan Digitalisasi</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4">
-                        <div class="card h-100 card-body shadow lift pb-0" style="min-height: 135px; background-image: url({{ asset('assets/jdih/images/backgrounds/panel_bg.png') }})">
-                            <a href="https://kliknphdbirohukum.website" class="text-body">
-                                <div class="d-flex align-items-center">
-                                    <i class="ph-hand-pointing ph-3x text-success me-3"></i>
-
-                                    <div class="flex-fill text-end">
-                                        <h3 class="mb-0 fw-bold">KLIK NPHD</h3>
-                                        <span class="d-block fs-lg">Sistem Penyusunan Naskah Perjanjian Hibah Daerah</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                </div> -->
 
             </div>
         </div>

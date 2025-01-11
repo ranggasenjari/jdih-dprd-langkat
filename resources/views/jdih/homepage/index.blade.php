@@ -129,12 +129,12 @@
                                 </div>
                                 <div class="row flex-fill">
                                     <div class="col-6">
-                                        <h6 class="mb-1 fw-bold">Jenis Dokumen</h6>
+                                        <h6 class="mb-0 fw-bold">Jenis Dokumen</h6>
                                         <u><a href="{{ route('legislation.law.category', ['category' => $popularLaw->category->slug]) }}" class="text-body"> {{ $popularLaw->category->name }}</a></u>
                                     </div>
                                     <div class="col-6">
-                                        <h6 class="mb-1 fw-bold">Nomor</h6>
-                                        <p class="mb-0">{{ $popularLaw->code_number }}</p>
+                                        <h6 class="mb-0 fw-bold">Nomor</h6>
+                                        <p class="mb-1">{{ $popularLaw->code_number }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -145,8 +145,8 @@
                                     </div>
                                 </div>
                                 <div class="flex-fill">
-                                    <h6 class="mb-1 fw-bold">Judul</h6>
-                                    <p class="mb-0">{{ $popularLaw->title }}</p>
+                                    <h6 class="mb-0 fw-bold">Judul</h6>
+                                    <p class="mb-1">{{ $popularLaw->title }}</p>
                                 </div>
                             </div>
                             <div class="d-flex mb-1">
@@ -157,12 +157,12 @@
                                 </div>
                                 <div class="row flex-fill">
                                     <div class="col-6">
-                                        <h6 class="mb-1 fw-bold">Tgl. Penetapan</h6>
-                                        <p class="mb-0">{{ $popularLaw->timeformatted($popularLaw->approved, "j F Y") }}</p>
+                                        <h6 class="mb-0 fw-bold">Tgl. Penetapan</h6>
+                                        <p class="mb-1">{{ $popularLaw->timeformatted($popularLaw->approved, "j F Y") }}</p>
                                     </div>
                                     <div class="col-6">
-                                        <h6 class="mb-1 fw-bold">Tgl. Pengundangan</h6>
-                                        <p class="mb-0">{{ $popularLaw->timeformatted($popularLaw->published, "j F Y") }}</p>
+                                        <h6 class="mb-0 fw-bold">Tgl. Pengundangan</h6>
+                                        <p class="mb-1">{{ $popularLaw->timeformatted($popularLaw->published, "j F Y") }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -174,12 +174,12 @@
                                 </div>
                                 <div class="row flex-fill">
                                     <div class="col-6">
-                                        <h6 class="mb-1 fw-bold">Subjek</h6>
-                                        <p class="mb-0">{{ $popularLaw->subject }}</p>
+                                        <h6 class="mb-0 fw-bold">Subjek</h6>
+                                        <p class="mb-1">{{ $popularLaw->subject }}</p>
                                     </div>
                                     <div class="col-6">
-                                        <h6 class="mb-1 fw-bold">Status</h6>
-                                        <p class="mb-0">
+                                        <h6 class="mb-0 fw-bold">Status</h6>
+                                        <p class="mb-1">
                                             <a href="{{ route('legislation.law.index', ['statuses[]' => $popularLaw->status->value]) }}" class="text-body">{!! $popularLaw->status->badge() !!}</a>
                                         </p>
                                     </div>
@@ -193,17 +193,17 @@
                                 </div>
                                 <div class="row flex-fill">
                                     <div class="col-6">
-                                        <h6 class="mb-1 fw-bold">Pemrakarsa</h6>
-                                        @if($popularLaw->institutes)
-                                            <u>
-                                                <a href="{{ route('legislation.law.index', ['institutes[]' => $popularLaw->institute->slug]) }}" class="text-body">{{ $popularLaw->institute->name }}</a>
-                                            </u>
+                                        <h6 class="mb-0 fw-bold">Pemrakarsa</h6>
+                                        @empty (!$popularLaw->institute)
+                                        <u>
+                                            <a href="{{ route('legislation.law.index', ['institutes[]' => $popularLaw->institute->slug]) }}" class="text-body">{{ $popularLaw->institute->name }}</a>
+                                        </u>
                                         @else
                                             -
-                                        @endif
+                                        @endempty
                                     </div>
                                     <div class="col-6">
-                                        <h6 class="mb-1 fw-bold">Urusan Pemerintahan</h6>
+                                        <h6 class="mb-0 fw-bold">Urusan Pemerintahan</h6>
                                         @if($popularLaw->matters->count() > 0)
                                             <ul class="list-inline mb-0">
                                                 @foreach ($popularLaw->matters as $matter)

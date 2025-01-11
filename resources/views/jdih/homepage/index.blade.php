@@ -243,19 +243,26 @@
                     </div>
                     <div class="row gx-4">
                         @foreach ($latestLaws as $law)
-                            <div class="col-xl-4 my-3">
-                                <div class="card lift shadow h-100">
-                                    <a href="{{ route('legislation.law.show', ['category' => $law->category->slug, 'legislation' => $law->slug])}}" class="text-body link-danger">
-                                        <div class="card-header border-0 pb-0">
-                                            <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill mb-2">{{ $law->category->name }}</span>
-                                            <h6 class="fw-bold mb-0">{{ $law->shortTitle }}</h6>
-                                        </div>
-                                        <div class="card-body fs-md pb-0">
-                                            <p class="mb-0 text-body">{{ $law->title }}</p>
-                                        </div>
-                                    </a>
-                                </div>
+                        <div class="col-xl-4 my-2">
+                            <div class="card lift shadow-sm h-100 border-0 rounded-lg">
+                                <a href="{{ route('legislation.law.show', ['category' => $law->category->slug, 'legislation' => $law->slug]) }}" class="text-decoration-none">
+                                    <div class="card-header bg-white border-0 pb-1">
+                                        <h5 class="fw-bold text-dark mb-1" style="max-width: 100%;">
+                                            {{ Str::limit($law->shortTitle, 150, '...') }}
+                                        </h5>
+                                        <span class="badge bg-info text-white rounded-sm text-sm">
+                                            {{ $law->category->name }}
+                                        </span>
+                                    </div>
+                                    <div class="card-body fs-sm p-2">
+                                        <p class="text-muted text-black mb-0" style="max-width: 100%;">
+                                            {{ Str::limit($law->title, 200, '...') }}
+                                        </p>
+                                    </div>
+                                </a>
                             </div>
+                        </div>
+
                         @endforeach
                     </div>
                 </section>

@@ -195,7 +195,11 @@
                                     <div class="col-6">
                                         <h6 class="mb-1 fw-bold">Pemrakarsa</h6>
                                         <u>
-                                            <a href="{{ route('legislation.law.index', ['institutes[]' => $popularLaw->institute->slug]) }}" class="text-body">{{ $popularLaw->institute->name }}</a>
+                                            @if($popularLaw->institutes->count() > 0)
+                                                <a href="{{ route('legislation.law.index', ['institutes[]' => $popularLaw->institute->slug]) }}" class="text-body">{{ $popularLaw->institute->name }}</a>
+                                            @else
+                                                -
+                                            @endif
                                         </u>
                                     </div>
                                     <div class="col-6">

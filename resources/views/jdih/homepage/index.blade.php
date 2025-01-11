@@ -194,13 +194,13 @@
                                 <div class="row flex-fill">
                                     <div class="col-6">
                                         <h6 class="mb-1 fw-bold">Pemrakarsa</h6>
-                                        <u>
-                                            @if($popularLaw->institutes)
+                                        @if($popularLaw->institutes)
+                                            <u>
                                                 <a href="{{ route('legislation.law.index', ['institutes[]' => $popularLaw->institute->slug]) }}" class="text-body">{{ $popularLaw->institute->name }}</a>
-                                            @else
-                                                -
-                                            @endif
-                                        </u>
+                                            </u>
+                                        @else
+                                            -
+                                        @endif
                                     </div>
                                     <div class="col-6">
                                         <h6 class="mb-1 fw-bold">Urusan Pemerintahan</h6>

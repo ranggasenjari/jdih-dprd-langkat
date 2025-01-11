@@ -195,7 +195,7 @@
                                     <div class="col-6">
                                         <h6 class="mb-1 fw-bold">Pemrakarsa</h6>
                                         <u>
-                                            @if($popularLaw->institutes->count() > 0)
+                                            @if($popularLaw->institutes)
                                                 <a href="{{ route('legislation.law.index', ['institutes[]' => $popularLaw->institute->slug]) }}" class="text-body">{{ $popularLaw->institute->name }}</a>
                                             @else
                                                 -

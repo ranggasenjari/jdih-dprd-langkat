@@ -16,7 +16,7 @@
                     <h2 class="mb-3 text-handwriting">Sekapur Sirih</h2>
                     <p class="fs-lg">Situs ini merupakan situs resmi JDIH Sekretariat DPRD Kab. Langkat. Situs ini memuat data dan informasi-informasi produk hukum baik produk hukum pusat maupun daerah. Disamping itu, situs ini memuat pula informasi mengenai buku-buku referensi tentang hukum yang dimiliki oleh DPRD Kab. Langkat.<br></p>
                     <div class="author mt-4">
-                        <span class="fw-semibold fs-lg">Drs. Basrah Pardomuan</span><br>
+                        <span class="fw-semibold fs-lg">Drs. Basrah Pardomuan, M.AP.</span><br>
                         <span class="text-light fs-sm">Sekretaris DPRD Kab. Langkat</span>
                     </div>
                 </div>

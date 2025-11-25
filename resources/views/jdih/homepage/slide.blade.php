@@ -2,9 +2,11 @@
 
     <div id="carouselExampleFade" class="carousel slide carousel-fade overlay" data-bs-ride="carousel">
         <div class="carousel-inner">
-            @foreach ($slides as $slide)
-                <div class="carousel-item @if ($loop->first) active @endif" style="background-image: url({{ $slide->image->source }}); background-position:{{ $slide->position }}; min-height: 380px"></div>
-            @endforeach
+            @if ($slides)
+                @foreach ($slides as $slide)
+                    <div class="carousel-item @if ($loop->first) active @endif" style="background-image: url({{ $slide->image->source }}); background-position:{{ $slide->position }}; min-height: 380px"></div>
+                @endforeach
+            @endif
         </div>
     </div>
 

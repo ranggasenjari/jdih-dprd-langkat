@@ -5,7 +5,7 @@
 @include('jdih.homepage.slide')
 
 <!-- Welcome -->
-<section class="bg-dark">`
+<section class="bg-dark">
     <div class="container pt-5 pb-0">
         <div class="content-wrapper">
             <div class="content row mb-5">

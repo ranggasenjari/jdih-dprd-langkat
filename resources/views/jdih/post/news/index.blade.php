@@ -58,7 +58,7 @@
                         <div class="card shadow mb-0">
                             <figure class="figure mb-0">
                                 <a href="{{ route('news.show', ['taxonomy' => $news->taxonomy->slug, 'post' => $news->slug]) }}">
-                                    <img src="{{ $news->cover->source ?? '' }}" class="figure-img img-fluid card-img-top m-0 h-250 object-fit-cover" alt="{{ $news->cover->name }}">
+                                    <img src="{{ $news->cover->source ?? '' }}" class="figure-img img-fluid card-img-top m-0 h-250 object-fit-cover" alt="{{ $news->cover->name ?? '' }}">
                                 </a>
                             </figure>
                             <div class="card-body">

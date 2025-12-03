@@ -104,7 +104,7 @@
                                     <td><input type="checkbox" class="checkbox" data-item="{{ $link->id }}"></td>
                                     <td class="drag-handle"><i class="ph-dots-six-vertical dragula-handle"></i></td>
                                 @endcannot
-                                <td class="text-center"><img src="{{ $link->image->thumbSource }}" class="img-preview rounded"></td>
+                                <td class="text-center"><img src="{{ $link->image->thumbSource ?? '' }}" class="img-preview rounded"></td>
                                 <td>
                                     <span class="fw-semibold d-block">{{ $link->title }}</span>
                                     <span class="text-muted fs-sm">{{ $link->url }}</span>

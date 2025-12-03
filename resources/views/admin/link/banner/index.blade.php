@@ -107,7 +107,7 @@
                                     <td><input type="checkbox" class="checkbox" data-item="{{ $banner->id }}"></td>
                                     <td class="drag-handle"><i class="ph-dots-six-vertical dragula-handle"></i></td>
                                 @endcannot
-                                <td class="text-center"><img src="{{ $banner->image->thumbSource }}" class="img-preview rounded"></td>
+                                <td class="text-center"><img src="{{ $banner->image->thumbSource ?? '' }}" class="img-preview rounded"></td>
                                 <td>
                                     <span class="fw-semibold d-block">{{ $banner->title }}</span>
                                     <span class="text-muted fs-sm">{{ $banner->url }}</span>

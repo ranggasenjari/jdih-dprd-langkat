@@ -105,7 +105,7 @@
                                 @cannot('isAuthor')
                                     <td><input type="checkbox" class="checkbox" data-item="{{ $image->id }}"></td>
                                 @endcannot
-                                <td class="safezone text-center"><img src="{{ $image->thumbSource }}" class="img-preview rounded"></td>
+                                <td class="safezone text-center"><img src="{{ $image->thumbSource ?? '' }}" class="img-preview rounded"></td>
                                 <td>
                                     <span class="fw-semibold d-block">{{ $image->name }}</span>
                                     @if (!empty($image->caption))

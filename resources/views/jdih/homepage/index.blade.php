@@ -396,7 +396,7 @@
 
                                     <figure class="figure card-img mb-0">
                                         <a href="{{ route('news.show', ['taxonomy' => $news->taxonomy->slug, 'post' => $news->slug]) }}">
-                                            <img src="{{ $news->cover->source }}" class="img-fluid card-img-top m-0 h-250 object-fit-cover" alt="{{ $news->cover->name }}">
+                                            <img src="{{ $news->cover->source ?? '' }}" class="img-fluid card-img-top m-0 h-250 object-fit-cover" alt="{{ $news->cover->name }}">
                                         </a>
                                     </figure>
 

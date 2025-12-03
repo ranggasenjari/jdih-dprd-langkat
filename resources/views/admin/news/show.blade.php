@@ -20,7 +20,7 @@
 
                     <div class="card-body pt-0">
                         <div class="mb-3">
-                            @if($news->cover)<img src="{{ $news->cover->source }}" class="img-fluid rounded mx-auto d-block">@endif
+                            @if($news->cover)<img src="{{ $news->cover->source ?? '' }}" class="img-fluid rounded mx-auto d-block">@endif
                             @if (!empty($news->cover->caption))<span class="mt-1 d-block text-muted text-center">{{ $news->cover->caption }}</span>@endif
                         </div>
 

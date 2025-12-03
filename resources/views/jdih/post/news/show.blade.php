@@ -45,7 +45,7 @@
                     </div>
 
                     <figure class="card-image mx-auto">
-                        <img src="{{ $news->cover->source }}" class="figure-img img-fluid" alt="{{ $news->cover->name }}">
+                        <img src="{{ $news->cover->source ?? '' }}" class="figure-img img-fluid" alt="{{ $news->cover->name }}">
                         @isset($news->cover->caption)
                             <figcaption class="figure-caption fs-6 px-4 text-center">{{ $news->cover->caption }}</figcaption>
                         @endisset
@@ -131,7 +131,7 @@
 
                                     <figure class="figure card-img mb-0">
                                         <a href="{{ route('news.show', ['taxonomy' => $news->taxonomy->slug, 'post' => $news->slug]) }}">
-                                            <img src="{{ $news->cover->source }}" class="figure-img img-fluid card-img-top m-0" alt="{{ $news->cover->name }}" style="height: 250px; object-fit: cover">
+                                            <img src="{{ $news->cover->source ?? '' }}" class="figure-img img-fluid card-img-top m-0" alt="{{ $news->cover->name }}" style="height: 250px; object-fit: cover">
                                         </a>
                                     </figure>
 

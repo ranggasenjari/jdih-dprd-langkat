@@ -27,7 +27,6 @@ class UserSeeder extends Seeder
                 'name'  => 'Rangga',
                 'username'  => 'rangga',
                 'email' => 'rangga@gmail.com',
-                'password' => 'password',
                 'role'  => UserRole::ADMIN,
             ]);
 

@@ -15,14 +15,22 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         // Create a default user
+        // User::factory()
+        //     ->create([
+        //         'name'  => 'Harris Sontanu',
+        //         'username'  => 'admin',
+        //         'email' => 'harris.sontanu@gmail.com',
+        //         'role'  => UserRole::ADMIN,
+        //     ]);
         User::factory()
             ->create([
-                'name'  => 'Harris Sontanu',
-                'username'  => 'admin',
-                'email' => 'harris.sontanu@gmail.com',
+                'name'  => 'Rangga',
+                'username'  => 'rangga',
+                'email' => 'rangga@gmail.com',
+                'password' => 'password',
                 'role'  => UserRole::ADMIN,
             ]);
 
-        User::factory()->count(15)->create();
+        // User::factory()->count(15)->create();
     }
 }

@@ -113,6 +113,10 @@ class ImageController extends MediaController
         $hasFile = $request->hasFile('image');
         if ($hasFile) {
             $image  = $request->file('image');
+            $ext = strtolower($image->getClientOriginalExtension());
+            if (!in_array($ext, ['jpg', 'jpeg', 'png'])) {
+                abort(400, 'Hanya file JPG dan PNG yang diperbolehkan.');
+            }
             $name   = $image->hashName();
             $dir    = 'galeri/' . now()->format('Y');
 

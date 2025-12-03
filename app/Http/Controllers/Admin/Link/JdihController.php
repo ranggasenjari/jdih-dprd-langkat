@@ -112,6 +112,10 @@ class JdihController extends LinkController
     {
         if ($request->hasFile('image')) {
             $image  = $request->file('image');
+            $ext = strtolower($image->getClientOriginalExtension());
+            if (!in_array($ext, ['jpg', 'jpeg', 'png'])) {
+                abort(400, 'Hanya file JPG dan PNG yang diperbolehkan.');
+            }
             $name   = $image->hashName();
             $dir    = 'tautan/jdih';
 

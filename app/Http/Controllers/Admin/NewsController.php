@@ -172,6 +172,10 @@ class NewsController extends AdminController
         if ($request->hasFile('cover'))
         {
             $file = $request->file('cover');
+            $ext = strtolower($file->getClientOriginalExtension());
+            if (!in_array($ext, ['jpg', 'jpeg', 'png'])) {
+                abort(400, 'Hanya file JPG dan PNG yang diperbolehkan.');
+            }
             $name = $file->hashName();
             $dir  = 'berita/' . now()->format('Y');
 
@@ -205,7 +209,10 @@ class NewsController extends AdminController
         if ($request->hasFile('photos'))
         {
             foreach ($request->file('photos') as $photo) {
-
+                $ext = strtolower($photo->getClientOriginalExtension());
+                if (!in_array($ext, ['jpg', 'jpeg', 'png'])) {
+                    abort(400, 'Hanya file JPG dan PNG yang diperbolehkan.');
+                }
                 $name = $photo->hashName();
                 $dir  = 'berita/' . now()->format('Y');
 

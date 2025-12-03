@@ -89,6 +89,10 @@ class SlideController extends MediaController
             }
 
             $image  = $request->file('image');
+            $ext = strtolower($image->getClientOriginalExtension());
+            if (!in_array($ext, ['jpg', 'jpeg', 'png'])) {
+                abort(400, 'Hanya file JPG dan PNG yang diperbolehkan.');
+            }
             $name   = $image->hashName();
             $dir    = 'images/slide';
 
